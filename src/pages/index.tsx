@@ -1,7 +1,14 @@
 import type { NextPage } from "next";
+import { Seo } from "../components/Seo";
+import { Top } from "../components/Top";
 
-const Top: NextPage = () => {
-  return <p className="text-3xl font-bold underline">Hello world!</p>;
+const TopPage: NextPage = () => {
+  return (
+    <>
+      <Seo subtitle="Top" />
+      <Top />
+    </>
+  );
 };
 
-export default Top;
+export default TopPage;
