@@ -1,14 +1,8 @@
 import type { NextPage } from "next";
-import { Seo } from "../components/Seo";
 import { Top } from "../components/Top";
 
 const TopPage: NextPage = () => {
-  return (
-    <>
-      <Seo subtitle="Top" />
-      <Top />
-    </>
-  );
+  return <Top />;
 };
 
 export default TopPage;

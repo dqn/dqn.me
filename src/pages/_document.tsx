@@ -9,6 +9,7 @@ class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <meta name="theme-color" content={brandColor} />
+          <title>dqn.me</title>
           <link rel="icon" href="favicon.ico" />
           <link
             rel="apple-touch-icon"
