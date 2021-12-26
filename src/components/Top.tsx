@@ -1,4 +1,5 @@
 import { ExternalLink } from "./ExternalLink";
+import { Footer } from "./Footer";
 import { ProfileHeader } from "./ProfileHeader";
 import { PrettyHeading } from "./PrettyHeading";
 import { UnorderedList } from "./UnorderedList";
@@ -43,7 +44,7 @@ export const Top: React.VFC = () => {
         </div>
       </main>
 
-      <footer className="text-xs text-center py-2">© 2021 dqn</footer>
+      <Footer />
     </div>
   );
 };
