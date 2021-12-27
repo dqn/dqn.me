@@ -17,7 +17,9 @@ const NotFound: React.VFC = () => {
 
         <div className="mt-2">
           <Link href="/">
-            <a className="hover:underline">Top page</a>
+            <a className="rounded hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-light">
+              Top page
+            </a>
           </Link>
         </div>
       </main>

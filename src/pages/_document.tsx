@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import tailwindCssConfig from "../../tailwind.config.js";
 
-const brandColor = tailwindCssConfig.theme.colors.brand;
+const brandColor = tailwindCssConfig.theme.colors.brand.DEFAULT;
 
 class MyDocument extends Document {
   override render() {
