@@ -1,8 +1,35 @@
 import { ExternalLink } from "./ExternalLink";
 import { Footer } from "./Footer";
-import { ProfileHeader } from "./ProfileHeader";
-import { PrettyHeading } from "./PrettyHeading";
-import { UnorderedList } from "./UnorderedList";
+
+const ProfileHeader: React.VFC = () => {
+  return (
+    <header className="text-center pt-12 pb-8">
+      <img
+        src="/avatar.jpg"
+        alt="avatar"
+        width={128}
+        height={128}
+        className="rounded-full mx-auto"
+      />
+      <h1 className="text-2xl font-bold mt-4">dqn</h1>
+      <p className="font-semibold mt-1">Software Engineer</p>
+    </header>
+  );
+};
+
+const Heading: React.FC = ({ children }) => {
+  return <h2 className="font-bold text-xl leading-none">👻 {children}</h2>;
+};
+
+const List: React.VFC<{ items: readonly React.ReactNode[] }> = ({ items }) => {
+  return (
+    <ul className="text-sm list-disc list-inside space-y-2 pl-2">
+      {items.map((item, i) => (
+        <li key={i}>{item}</li>
+      ))}
+    </ul>
+  );
+};
 
 export const Top: React.VFC = () => {
   return (
@@ -10,27 +37,19 @@ export const Top: React.VFC = () => {
       <main className="flex-1 overflow-x-hidden p-8 w-full max-w-md mx-auto">
         <ProfileHeader />
 
-        <div className="mt-8">
-          <PrettyHeading>Likes</PrettyHeading>
+        <div className="mt-12">
+          <Heading>Likes</Heading>
 
           <div className="mt-4">
-            <UnorderedList
-              items={[
-                "Web",
-                "TypeScript",
-                "React / Next.js",
-                "Tailwind CSS",
-                "Prisma",
-              ]}
-            />
+            <List items={["Web", "TypeScript", "React / Next.js"]} />
           </div>
         </div>
 
-        <div className="mt-8">
-          <PrettyHeading>Links</PrettyHeading>
+        <div className="mt-12">
+          <Heading>Links</Heading>
 
           <div className="mt-4">
-            <UnorderedList
+            <List
               items={[
                 <ExternalLink href="https://github.com/dqn">
                   GitHub (@dqn)
