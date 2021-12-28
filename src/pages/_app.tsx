@@ -12,7 +12,7 @@ const MyApp: React.VFC<AppProps> = ({ Component, pageProps }) => {
         og={{
           type: "website",
           url: baseUrl,
-          image: withBaseUrl("ogp.png"),
+          image: withBaseUrl("ogp.jpg"),
         }}
         twitter={{
           card: "summary_large_image",
