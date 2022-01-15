@@ -57,6 +57,9 @@ export const Top: React.VFC = () => {
                 <ExternalLink href="https://twitter.com/dqn270">
                   Twitter (@dqn270)
                 </ExternalLink>,
+                <ExternalLink href="https://zenn.dev/dqn">
+                  Zenn (@dqn)
+                </ExternalLink>,
               ]}
             />
           </div>
