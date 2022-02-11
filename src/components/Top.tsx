@@ -3,16 +3,18 @@ import { Footer } from "./Footer";
 
 const ProfileHeader: React.VFC = () => {
   return (
-    <header className="text-center">
+    <header className="text-center md:flex md:justify-center md:space-x-6">
       <img
         src="/avatar.jpg"
         alt="avatar"
         width={128}
         height={128}
-        className="mx-auto rounded-full"
+        className="mx-auto rounded-full md:mx-0"
       />
-      <h1 className="mt-4 text-2xl font-bold">dqn</h1>
-      <p className="mt-1 font-semibold">Software Engineer</p>
+      <div className="mt-4 md:mt-0 md:flex md:flex-col md:items-center md:justify-center">
+        <h1 className="w-full text-2xl font-bold md:text-left">dqn</h1>
+        <p className="mt-1 font-semibold">Software Engineer</p>
+      </div>
     </header>
   );
 };
@@ -54,9 +56,9 @@ const Main: React.VFC = () => {
   ];
 
   return (
-    <main className="mx-auto w-full max-w-md flex-1 px-8 pt-12">
+    <main className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center p-8">
       <ProfileHeader />
-      <article className="mt-12 space-y-12">
+      <article className="mt-20 space-y-12 md:flex md:justify-between md:space-y-0">
         <Section label="Loves">
           <List items={loves} />
         </Section>
