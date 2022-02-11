@@ -9,10 +9,10 @@ const ProfileHeader: React.VFC = () => {
         alt="avatar"
         width={128}
         height={128}
-        className="rounded-full mx-auto"
+        className="mx-auto rounded-full"
       />
-      <h1 className="text-2xl font-bold mt-4">dqn</h1>
-      <p className="font-semibold mt-1">Software Engineer</p>
+      <h1 className="mt-4 text-2xl font-bold">dqn</h1>
+      <p className="mt-1 font-semibold">Software Engineer</p>
     </header>
   );
 };
@@ -22,7 +22,7 @@ type ListProps = {
 };
 const List: React.VFC<ListProps> = ({ items }) => {
   return (
-    <ul className="text-sm list-disc list-inside space-y-2 pl-2">
+    <ul className="list-inside list-disc space-y-2 pl-2 text-sm">
       {items.map((item, i) => (
         <li key={i}>{item}</li>
       ))}
@@ -36,7 +36,7 @@ type SectionProps = {
 const Section: React.FC<SectionProps> = ({ label, children }) => {
   return (
     <section>
-      <h2 className="font-bold text-xl leading-none">
+      <h2 className="text-xl font-bold leading-none">
         <span aria-hidden>👻 </span>
         {label}
       </h2>
@@ -54,7 +54,7 @@ const Main: React.VFC = () => {
   ];
 
   return (
-    <main className="flex-1 px-8 pt-12 w-full max-w-md mx-auto">
+    <main className="mx-auto w-full max-w-md flex-1 px-8 pt-12">
       <ProfileHeader />
       <article className="mt-12 space-y-12">
         <Section label="Loves">
@@ -70,7 +70,7 @@ const Main: React.VFC = () => {
 
 export const Top: React.VFC = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex min-h-screen flex-col">
       <Main />
       <Footer />
     </div>

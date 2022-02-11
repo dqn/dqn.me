@@ -3,8 +3,8 @@ import { Footer } from "../components/Footer";
 
 const NotFound: React.VFC = () => {
   return (
-    <div className="flex flex-col h-screen">
-      <main className="flex-1 flex flex-col items-center justify-center">
+    <div className="flex h-screen flex-col">
+      <main className="flex flex-1 flex-col items-center justify-center">
         <img
           src="/404.png"
           alt="404"
@@ -13,7 +13,7 @@ const NotFound: React.VFC = () => {
           className="mx-auto"
         />
 
-        <h1 className="text-3xl font-bold mt-8">404 Not Found…</h1>
+        <h1 className="mt-8 text-3xl font-bold">404 Not Found…</h1>
 
         <div className="mt-2">
           <Link href="/">
