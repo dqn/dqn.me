@@ -1,8 +1,9 @@
 type Props = {
+  text: string;
   href: string;
 };
 
-export const ExternalLink: React.FC<Props> = ({ href, children }) => {
+export const ExternalLink: React.FC<Props> = ({ href, text }) => {
   return (
     <a
       target="_blank"
@@ -10,7 +11,7 @@ export const ExternalLink: React.FC<Props> = ({ href, children }) => {
       href={href}
       className="rounded hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-light"
     >
-      {children}
+      {text}
     </a>
   );
 };

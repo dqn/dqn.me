@@ -6,7 +6,7 @@ const themeColor = colors.brand.DEFAULT;
 class MyDocument extends Document {
   override render() {
     return (
-      <Html lang="ja">
+      <Html>
         <Head>
           <meta name="theme-color" content={themeColor} />
           <link rel="icon" href="/favicon.ico" />

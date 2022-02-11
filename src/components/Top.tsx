@@ -3,7 +3,7 @@ import { Footer } from "./Footer";
 
 const ProfileHeader: React.VFC = () => {
   return (
-    <header className="text-center pt-12 pb-8">
+    <header className="text-center">
       <img
         src="/avatar.jpg"
         alt="avatar"
@@ -17,11 +17,10 @@ const ProfileHeader: React.VFC = () => {
   );
 };
 
-const Heading: React.FC = ({ children }) => {
-  return <h2 className="font-bold text-xl leading-none">👻 {children}</h2>;
+type ListProps = {
+  items: readonly React.ReactNode[];
 };
-
-const List: React.VFC<{ items: readonly React.ReactNode[] }> = ({ items }) => {
+const List: React.VFC<ListProps> = ({ items }) => {
   return (
     <ul className="text-sm list-disc list-inside space-y-2 pl-2">
       {items.map((item, i) => (
@@ -31,41 +30,48 @@ const List: React.VFC<{ items: readonly React.ReactNode[] }> = ({ items }) => {
   );
 };
 
+type SectionProps = {
+  label: string;
+};
+const Section: React.FC<SectionProps> = ({ label, children }) => {
+  return (
+    <section>
+      <h2 className="font-bold text-xl leading-none">
+        <span aria-hidden>👻 </span>
+        {label}
+      </h2>
+      <div className="mt-4">{children}</div>
+    </section>
+  );
+};
+
+const Main: React.VFC = () => {
+  const loves = ["Web", "TypeScript", "React / Next.js"];
+  const links = [
+    <ExternalLink text="GitHub (@dqn)" href="https://github.com/dqn" />,
+    <ExternalLink text="Twitter (@dqn270)" href="https://twitter.com/dqn270" />,
+    <ExternalLink text="Zenn (@dqn)" href="https://zenn.dev/dqn" />,
+  ];
+
+  return (
+    <main className="flex-1 px-8 pt-12 w-full max-w-md mx-auto">
+      <ProfileHeader />
+      <article className="mt-12 space-y-12">
+        <Section label="Loves">
+          <List items={loves} />
+        </Section>
+        <Section label="Links">
+          <List items={links} />
+        </Section>
+      </article>
+    </main>
+  );
+};
+
 export const Top: React.VFC = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <main className="flex-1 overflow-x-hidden p-8 w-full max-w-md mx-auto">
-        <ProfileHeader />
-
-        <div className="mt-12">
-          <Heading>Likes</Heading>
-
-          <div className="mt-4">
-            <List items={["Web", "TypeScript", "React / Next.js"]} />
-          </div>
-        </div>
-
-        <div className="mt-12">
-          <Heading>Links</Heading>
-
-          <div className="mt-4">
-            <List
-              items={[
-                <ExternalLink href="https://github.com/dqn">
-                  GitHub (@dqn)
-                </ExternalLink>,
-                <ExternalLink href="https://twitter.com/dqn270">
-                  Twitter (@dqn270)
-                </ExternalLink>,
-                <ExternalLink href="https://zenn.dev/dqn">
-                  Zenn (@dqn)
-                </ExternalLink>,
-              ]}
-            />
-          </div>
-        </div>
-      </main>
-
+      <Main />
       <Footer />
     </div>
   );
