@@ -1,14 +1,14 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import tailwindCssConfig from "../../tailwind.config.js";
+import colors from "../../colors";
 
-const brandColor = tailwindCssConfig.theme.colors.brand.DEFAULT;
+const themeColor = colors.brand.DEFAULT;
 
 class MyDocument extends Document {
   override render() {
     return (
       <Html lang="ja">
         <Head>
-          <meta name="theme-color" content={brandColor} />
+          <meta name="theme-color" content={themeColor} />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="apple-touch-icon"
