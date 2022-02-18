@@ -10,6 +10,7 @@ const NotFound: React.VFC = () => {
           alt="404"
           width={256}
           height={256}
+          decoding="async"
           className="mx-auto"
         />
 

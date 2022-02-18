@@ -9,6 +9,7 @@ const ProfileHeader: React.VFC = () => {
         alt="avatar"
         width={128}
         height={128}
+        decoding="async"
         className="mx-auto rounded-full md:mx-0"
       />
       <div className="mt-4 md:mt-0 md:flex md:flex-col md:items-center md:justify-center">
