@@ -20,7 +20,7 @@
     "@types/react": "17.0.40",
     "@types/tailwindcss": "3.0.9",
     "autoprefixer": "10.4.4",
-    "postcss": "8.4.11",
+    "postcss": "8.4.12",
     "prettier": "2.6.0",
     "prettier-plugin-tailwindcss": "0.1.8",
     "tailwindcss": "3.0.23",
