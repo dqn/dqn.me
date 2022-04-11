@@ -1,7 +1,7 @@
 import { ExternalLink } from "./ExternalLink";
 import { Footer } from "./Footer";
 
-const ProfileHeader: React.VFC = () => {
+const ProfileHeader: React.FC = () => {
   return (
     <header className="text-center md:flex md:justify-center md:space-x-6">
       <img
@@ -23,7 +23,7 @@ const ProfileHeader: React.VFC = () => {
 type ListProps = {
   items: readonly React.ReactNode[];
 };
-const List: React.VFC<ListProps> = ({ items }) => {
+const List: React.FC<ListProps> = ({ items }) => {
   return (
     <ul className="list-inside list-disc space-y-2 pl-2 text-sm">
       {items.map((item, i) => (
@@ -35,6 +35,7 @@ const List: React.VFC<ListProps> = ({ items }) => {
 
 type SectionProps = {
   label: string;
+  children: React.ReactNode;
 };
 const Section: React.FC<SectionProps> = ({ label, children }) => {
   return (
@@ -48,7 +49,7 @@ const Section: React.FC<SectionProps> = ({ label, children }) => {
   );
 };
 
-const Main: React.VFC = () => {
+const Main: React.FC = () => {
   const loves = ["Web", "TypeScript", "React / Next.js"];
   const links = [
     <ExternalLink text="GitHub (@dqn)" href="https://github.com/dqn" />,
@@ -71,7 +72,7 @@ const Main: React.VFC = () => {
   );
 };
 
-export const Top: React.VFC = () => {
+export const Top: React.FC = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Main />

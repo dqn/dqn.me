@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Footer } from "../components/Footer";
 
-const NotFound: React.VFC = () => {
+const NotFound: React.FC = () => {
   return (
     <div className="flex h-screen flex-col">
       <main className="flex flex-1 flex-col items-center justify-center">
