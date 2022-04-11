@@ -18,7 +18,7 @@ type Props = {
   twitter: Twitter;
 };
 
-export const Seo: React.VFC<Props> = ({ title, description, og, twitter }) => {
+export const Seo: React.FC<Props> = ({ title, description, og, twitter }) => {
   return (
     <Head>
       <title>{title}</title>

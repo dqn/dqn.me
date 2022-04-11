@@ -3,7 +3,7 @@ import { Seo } from "../components/Seo";
 import { baseUrl, withBaseUrl } from "../helpers/withBaseUrl";
 import "../styles/globals.css";
 
-const MyApp: React.VFC<AppProps> = ({ Component, pageProps }) => {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Seo
