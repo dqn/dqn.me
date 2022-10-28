@@ -1,14 +1,27 @@
+import assert from "assert";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import colors from "../../colors";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../tailwind.config";
 
-const themeColor = colors.brand.DEFAULT;
+function getThemeColor() {
+  const fullConfig = resolveConfig(tailwindConfig);
+
+  const colors = fullConfig.theme?.colors;
+  assert(typeof colors === "object");
+  const brandColors = colors["brand"];
+  assert(typeof brandColors === "object");
+  const themeColor = brandColors["DEFAULT"];
+  assert(typeof themeColor === "string");
+
+  return themeColor;
+}
 
 class MyDocument extends Document {
   override render() {
     return (
       <Html>
         <Head>
-          <meta name="theme-color" content={themeColor} />
+          <meta name="theme-color" content={getThemeColor()} />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="apple-touch-icon"

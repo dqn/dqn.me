@@ -1,10 +1,11 @@
+import Image from "next/image";
 import { ExternalLink } from "./ExternalLink";
 import { Footer } from "./Footer";
 
 const ProfileHeader: React.FC = () => {
   return (
     <header className="text-center md:flex md:justify-center md:space-x-6">
-      <img
+      <Image
         src="/avatar.jpg"
         alt="avatar"
         width={128}
@@ -52,9 +53,17 @@ const Section: React.FC<SectionProps> = ({ label, children }) => {
 const Main: React.FC = () => {
   const loves = ["Web", "TypeScript", "React / Next.js"];
   const links = [
-    <ExternalLink text="GitHub (@dqn)" href="https://github.com/dqn" />,
-    <ExternalLink text="Twitter (@dqn270)" href="https://twitter.com/dqn270" />,
-    <ExternalLink text="Zenn (@dqn)" href="https://zenn.dev/dqn" />,
+    <ExternalLink
+      text="GitHub (@dqn)"
+      href="https://github.com/dqn"
+      key="github"
+    />,
+    <ExternalLink
+      text="Twitter (@dqn270)"
+      href="https://twitter.com/dqn270"
+      key="twitter"
+    />,
+    <ExternalLink text="Zenn (@dqn)" href="https://zenn.dev/dqn" key="zenn" />,
   ];
 
   return (

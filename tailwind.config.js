@@ -1,12 +1,13 @@
-const colors = require("./colors");
-
-/**
- * @type {import("@types/tailwindcss/tailwind-config").TailwindConfig }
- */
+/** @type {import("tailwindcss").Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
-    colors,
+    colors: {
+      brand: {
+        DEFAULT: "#665886",
+        light: "#be9efc",
+      },
+    },
   },
   plugins: [],
 };
