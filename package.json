@@ -21,7 +21,7 @@
     "@types/react": "18.0.26",
     "@types/tailwindcss": "3.0.11",
     "autoprefixer": "10.4.13",
-    "eslint": "8.29.0",
+    "eslint": "8.30.0",
     "postcss": "8.4.20",
     "prettier": "2.8.1",
     "prettier-plugin-tailwindcss": "0.2.1",
