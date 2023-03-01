@@ -1,20 +1,21 @@
 import Image from "next/image";
 import { ExternalLink } from "./ExternalLink";
 import { Footer } from "./Footer";
+import avatar from "../../public/avatar.jpg";
 
 const ProfileHeader: React.FC = () => {
   return (
-    <header className="text-center md:flex md:justify-center md:space-x-6">
+    <header className="text-center xs:flex xs:justify-center xs:space-x-6">
       <Image
-        src="/avatar.jpg"
-        alt="avatar"
+        src={avatar.src}
         width={128}
         height={128}
+        alt="Illustration of my avatar"
         decoding="async"
-        className="mx-auto rounded-full md:mx-0"
+        className="mx-auto rounded-full xs:mx-0"
       />
-      <div className="mt-4 md:mt-0 md:flex md:flex-col md:items-center md:justify-center">
-        <h1 className="w-full text-2xl font-bold md:text-left">dqn</h1>
+      <div className="mt-4 xs:mt-0 xs:flex xs:flex-col xs:items-center xs:justify-center">
+        <h1 className="w-full text-2xl font-bold xs:text-left">dqn</h1>
         <p className="mt-1 font-semibold">Software Engineer</p>
       </div>
     </header>
@@ -51,7 +52,11 @@ const Section: React.FC<SectionProps> = ({ label, children }) => {
 };
 
 const Main: React.FC = () => {
-  const loves = ["Web", "TypeScript", "React / Next.js"];
+  const loves = [
+    "Web",
+    "TypeScript",
+    "React / Next.js",
+  ] as const satisfies readonly string[];
   const links = [
     <ExternalLink
       text="GitHub (@dqn)"
@@ -64,12 +69,12 @@ const Main: React.FC = () => {
       key="twitter"
     />,
     <ExternalLink text="Zenn (@dqn)" href="https://zenn.dev/dqn" key="zenn" />,
-  ];
+  ] as const satisfies readonly React.ReactNode[];
 
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center p-8">
+    <main className="mx-auto flex w-full max-w-screen-xs flex-1 flex-col justify-center p-8">
       <ProfileHeader />
-      <article className="mt-20 space-y-12 md:flex md:justify-between md:space-y-0">
+      <article className="mt-20 space-y-12 xs:flex xs:justify-between xs:space-y-0">
         <Section label="Loves">
           <List items={loves} />
         </Section>
