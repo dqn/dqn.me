@@ -14,8 +14,8 @@ type Twitter = {
 type Props = {
   title: string;
   description: string;
-  og: Og;
-  twitter: Twitter;
+  og?: Og;
+  twitter?: Twitter;
 };
 
 export const Seo: React.FC<Props> = ({ title, description, og, twitter }) => {

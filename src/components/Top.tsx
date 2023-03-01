@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ExternalLink } from "./ExternalLink";
 import { Footer } from "./Footer";
 import avatar from "../../public/avatar.jpg";
+import { PrettyLink } from "./PrettyLink";
 
 const ProfileHeader: React.FC = () => {
   return (
@@ -58,17 +59,18 @@ const Main: React.FC = () => {
     "React / Next.js",
   ] as const satisfies readonly string[];
   const links = [
-    <ExternalLink
-      text="GitHub (@dqn)"
-      href="https://github.com/dqn"
-      key="github"
-    />,
-    <ExternalLink
-      text="Twitter (@dqn270)"
-      href="https://twitter.com/dqn270"
-      key="twitter"
-    />,
-    <ExternalLink text="Zenn (@dqn)" href="https://zenn.dev/dqn" key="zenn" />,
+    <ExternalLink href="https://github.com/dqn" key="github">
+      GitHub (@dqn)
+    </ExternalLink>,
+    <ExternalLink href="https://twitter.com/dqn270" key="twitter">
+      Twitter (@dqn270)
+    </ExternalLink>,
+    <ExternalLink href="https://zenn.dev/dqn" key="zenn">
+      Zenn (@dqn)
+    </ExternalLink>,
+    <PrettyLink href="/illustrations" key="illustrations">
+      Illustrations
+    </PrettyLink>,
   ] as const satisfies readonly React.ReactNode[];
 
   return (
