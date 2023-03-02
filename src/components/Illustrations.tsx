@@ -2,12 +2,12 @@ import Image, { StaticImageData } from "next/image";
 import { Footer } from "./Footer";
 import { ExternalLink } from "./ExternalLink";
 import { PrettyLink } from "./PrettyLink";
-import i2021112800 from "../../public/illustrations/2021112800.png";
-import i2021112801 from "../../public/illustrations/2021112801.png";
-import i2022070200 from "../../public/illustrations/2022070200.png";
-import i2023022400 from "../../public/illustrations/2023022400.png";
-import i2023022700 from "../../public/illustrations/2023022700.png";
-import i2023022800 from "../../public/illustrations/2023022800.png";
+import image00 from "../../public/illustrations/2021112800.png";
+import image01 from "../../public/illustrations/2021112801.png";
+import image02 from "../../public/illustrations/2022070200.png";
+import image03 from "../../public/illustrations/2023022400.png";
+import image04 from "../../public/illustrations/2023022700.png";
+import image05 from "../../public/illustrations/2023030200.png";
 
 const Main: React.FC = () => {
   type Illustration = {
@@ -17,27 +17,27 @@ const Main: React.FC = () => {
 
   const illustrations = [
     {
-      image: i2021112800,
+      image: image00,
       illustrator: "sgkertomu",
     },
     {
-      image: i2021112801,
+      image: image01,
       illustrator: "sgkertomu",
     },
     {
-      image: i2022070200,
+      image: image02,
       illustrator: "pkochazukegamma",
     },
     {
-      image: i2023022400,
+      image: image03,
       illustrator: "shirofox",
     },
     {
-      image: i2023022700,
+      image: image04,
       illustrator: "dksg4",
     },
     {
-      image: i2023022800,
+      image: image05,
       illustrator: "B6_kino",
     },
   ] as const satisfies readonly Illustration[];
