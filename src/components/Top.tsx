@@ -2,7 +2,6 @@ import Image from "next/image";
 import { ExternalLink } from "./ExternalLink";
 import { Footer } from "./Footer";
 import avatar from "../../public/avatar.jpg";
-import { PrettyLink } from "./PrettyLink";
 
 const ProfileHeader: React.FC = () => {
   return (
@@ -68,9 +67,6 @@ const Main: React.FC = () => {
     <ExternalLink href="https://zenn.dev/dqn" key="zenn">
       Zenn (@dqn)
     </ExternalLink>,
-    <PrettyLink href="/illustrations" key="illustrations">
-      Illustrations
-    </PrettyLink>,
   ] as const satisfies readonly React.ReactNode[];
 
   return (
