@@ -1,3 +1,7 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // Because of using `output: "export"`
+    "@next/next/no-img-element": "off"
+  }
 }

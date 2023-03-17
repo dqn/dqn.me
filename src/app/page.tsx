@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Image from "next/image";
 import { ExternalLink } from "../components/ExternalLink";
 import avatar from "../../public/avatar.jpg";
 import { Footer } from "../components/Footer";
@@ -7,7 +6,7 @@ import { Footer } from "../components/Footer";
 const ProfileHeader: React.FC = () => {
   return (
     <header className="text-center xs:flex xs:justify-center xs:space-x-6">
-      <Image
+      <img
         src={avatar.src}
         width={128}
         height={128}

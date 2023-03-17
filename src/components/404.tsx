@@ -1,4 +1,3 @@
-import Image from "next/image";
 import i404 from "../../public/404.png";
 import { Footer } from "./Footer";
 import { PrettyLink } from "./PrettyLink";
@@ -8,7 +7,7 @@ const NotFound: React.FC = () => {
   return (
     <div className="flex h-screen flex-col">
       <main className="flex flex-1 flex-col items-center justify-center">
-        <Image
+        <img
           src={i404.src}
           width={i404.width}
           height={i404.height}
