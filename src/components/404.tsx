@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { Footer } from "../components/Footer";
 import i404 from "../../public/404.png";
-import { PrettyLink } from "../components/PrettyLink";
+import { Footer } from "./Footer";
+import { PrettyLink } from "./PrettyLink";
 
+// Waiting custom 404 page
 const NotFound: React.FC = () => {
   return (
     <div className="flex h-screen flex-col">

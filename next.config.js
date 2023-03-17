@@ -4,9 +4,9 @@
 const baseConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
-  swcMinify: true,
-  images: {
-    unoptimized: true,
+  output: "export",
+  experimental: {
+    appDir: true,
   },
 };
 

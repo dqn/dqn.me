@@ -1,7 +1,8 @@
+import type { NextPage } from "next";
 import Image from "next/image";
-import { ExternalLink } from "./ExternalLink";
-import { Footer } from "./Footer";
+import { ExternalLink } from "../components/ExternalLink";
 import avatar from "../../public/avatar.jpg";
+import { Footer } from "../components/Footer";
 
 const ProfileHeader: React.FC = () => {
   return (
@@ -84,7 +85,7 @@ const Main: React.FC = () => {
   );
 };
 
-export const Top: React.FC = () => {
+const TopPage: NextPage = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Main />
@@ -92,3 +93,5 @@ export const Top: React.FC = () => {
     </div>
   );
 };
+
+export default TopPage;
