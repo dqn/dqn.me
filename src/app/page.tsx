@@ -86,9 +86,14 @@ const Main: React.FC = () => {
 
 const TopPage: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col">
-      <Main />
-      <Footer />
+    <div className="relative min-h-screen">
+      <div className="absolute inset-0">
+        <WanderingGhost />
+      </div>
+      <div className="absolute inset-0 flex flex-col">
+        <Main />
+        <Footer />
+      </div>
     </div>
   );
 };
