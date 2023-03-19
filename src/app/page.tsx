@@ -2,10 +2,11 @@ import type { NextPage } from "next";
 import { ExternalLink } from "../components/ExternalLink";
 import avatar from "../../public/avatar.jpg";
 import { Footer } from "../components/Footer";
+import { WanderingGhost } from "../components/WanderingGhost";
 
 const ProfileHeader: React.FC = () => {
   return (
-    <header className="text-center xs:flex xs:justify-center xs:space-x-6">
+    <header className="animate-fade-in-and-drop text-center xs:flex xs:justify-center xs:space-x-6">
       <img
         src={avatar.src}
         width={128}
@@ -73,12 +74,16 @@ const Main: React.FC = () => {
     <main className="mx-auto flex w-full max-w-screen-xs flex-1 flex-col justify-center p-8">
       <ProfileHeader />
       <article className="mt-20 space-y-12 xs:flex xs:justify-between xs:space-y-0">
-        <Section label="Loves">
-          <List items={loves} />
-        </Section>
-        <Section label="Links">
-          <List items={links} />
-        </Section>
+        <div className="animate-fade-in-and-drop-100 opacity-0">
+          <Section label="Loves">
+            <List items={loves} />
+          </Section>
+        </div>
+        <div className="animate-fade-in-and-drop-200 opacity-0">
+          <Section label="Links">
+            <List items={links} />
+          </Section>
+        </div>
       </article>
     </main>
   );
