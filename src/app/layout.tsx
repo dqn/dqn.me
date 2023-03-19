@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <html lang="en">
+    <html>
       <body>{children}</body>
     </html>
   );
