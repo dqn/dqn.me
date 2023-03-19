@@ -100,7 +100,7 @@ const Main: React.FC = () => {
 
 const TopPage: NextPage = () => {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-[100svh]">
       <div className="absolute inset-0">
         <WanderingGhost />
       </div>

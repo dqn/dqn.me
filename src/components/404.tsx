@@ -5,7 +5,7 @@ import { PrettyLink } from "./PrettyLink";
 // Waiting custom 404 page
 const NotFound: React.FC = () => {
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex h-[100svh] flex-col">
       <main className="flex flex-1 flex-col items-center justify-center">
         <img
           src={i404.src}
