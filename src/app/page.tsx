@@ -3,6 +3,8 @@ import { ExternalLink } from "../components/ExternalLink";
 import avatar from "../../public/avatar.jpg";
 import { Footer } from "../components/Footer";
 import { WanderingGhost } from "../components/WanderingGhost";
+import { HeartIcon } from "../components/HeartIcon";
+import { LinkIcon } from "../components/LinkIcon";
 
 const ProfileHeader: React.FC = () => {
   return (
@@ -37,15 +39,18 @@ const List: React.FC<ListProps> = ({ items }) => {
 };
 
 type SectionProps = {
+  icon: React.ReactNode;
   label: string;
   children: React.ReactNode;
 };
-const Section: React.FC<SectionProps> = ({ label, children }) => {
+const Section: React.FC<SectionProps> = ({ icon, label, children }) => {
   return (
     <section>
       <h2 className="text-xl font-bold leading-none">
-        <span aria-hidden>👻 </span>
-        {label}
+        <div className="flex items-center space-x-1 ">
+          <div>{icon}</div>
+          <div>{label}</div>
+        </div>
       </h2>
       <div className="mt-4">{children}</div>
     </section>
@@ -75,12 +80,12 @@ const Main: React.FC = () => {
       <ProfileHeader />
       <article className="mt-20 space-y-12 xs:flex xs:justify-between xs:space-y-0">
         <div className="animate-fade-in-and-drop-100 opacity-0">
-          <Section label="Loves">
+          <Section icon={<HeartIcon />} label="Loves">
             <List items={loves} />
           </Section>
         </div>
         <div className="animate-fade-in-and-drop-200 opacity-0">
-          <Section label="Links">
+          <Section icon={<LinkIcon />} label="Links">
             <List items={links} />
           </Section>
         </div>
