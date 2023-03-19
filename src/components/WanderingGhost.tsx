@@ -73,8 +73,8 @@ function createGhost({ width, height }: CreateGhostParams): Ghost {
     x: direction === "left" ? width : 0,
     y: random(0, height),
     direction: direction,
-    size: randomInt(16, 48),
-    speed: random(1.5, 3.5),
+    size: randomInt(24, 48),
+    speed: random(1.2, 3.5),
   };
 }
 
@@ -106,7 +106,7 @@ export const WanderingGhost: React.FC = () => {
     const updateGhosts = () => {
       ghosts.forEach((ghost) => {
         ghost.x += ghost.direction === "left" ? -ghost.speed : ghost.speed;
-        ghost.y += Math.sin(ghost.x * 0.02) * 3;
+        ghost.y += Math.sin(ghost.x * 0.03) * 3;
       });
     };
 
