@@ -4,7 +4,6 @@
 
 html {
   @apply bg-brand;
+  @apply font-mono;
   color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic",
-    "YuGothic", Verdana, Meiryo, sans-serif;
 }

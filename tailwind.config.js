@@ -25,11 +25,39 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        shake: {
+          "10%,30%": {
+            transform: "rotate(8deg) scale(1.1)",
+          },
+          "20%,40%": {
+            transform: "rotate(-8deg) scale(1.1)",
+          },
+          "50%,90%": {
+            transform: "rotate(0deg) scale(1.1)",
+          },
+        },
+        typing: {
+          "0%": {
+            width: 0,
+          },
+          "100%": {
+            width: "17ch",
+            "border-right": "2px solid transparent",
+          },
+        },
+        caret: {
+          "50%": {
+            "border-right": "2px solid white",
+          },
+        },
       },
       animation: {
         "fade-in-and-drop": "fade-in-and-drop 0.4s ease-out forwards",
         "fade-in-and-drop-100": "fade-in-and-drop 0.4s ease-out 100ms forwards",
         "fade-in-and-drop-200": "fade-in-and-drop 0.4s ease-out 200ms forwards",
+        shake: "shake 1s ease-in-out forwards",
+        typing:
+          "0.8s typing 0.3s steps(17) forwards, caret 1s steps(1) infinite",
       },
     },
     colors: {

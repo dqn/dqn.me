@@ -15,11 +15,15 @@ const ProfileHeader: React.FC = () => {
         height={128}
         alt="Illustration of my avatar"
         decoding="async"
-        className="mx-auto rounded-full xs:mx-0"
+        className="mx-auto rounded-full hover:animate-shake xs:mx-0"
       />
       <div className="mt-4 xs:mt-0 xs:flex xs:flex-col xs:items-center xs:justify-center">
         <h1 className="w-full text-2xl font-bold xs:text-left">dqn</h1>
-        <p className="mt-1 font-semibold">Software Engineer</p>
+        <div className="mx-auto w-[17ch]">
+          <p className="mt-1 w-0 animate-typing overflow-hidden whitespace-nowrap font-semibold">
+            Software Engineer
+          </p>
+        </div>
       </div>
     </header>
   );
