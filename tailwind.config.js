@@ -7,6 +7,14 @@ module.exports = {
         xs: "512px",
       },
       keyframes: {
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
         "fade-in-and-drop": {
           "0%": {
             opacity: "0",
@@ -52,6 +60,7 @@ module.exports = {
         },
       },
       animation: {
+        "fade-in": "fade-in 0.4s ease-out forwards",
         "fade-in-and-drop": "fade-in-and-drop 0.4s ease-out forwards",
         "fade-in-and-drop-100": "fade-in-and-drop 0.4s ease-out 100ms forwards",
         "fade-in-and-drop-200": "fade-in-and-drop 0.4s ease-out 200ms forwards",
@@ -61,6 +70,8 @@ module.exports = {
       },
     },
     colors: {
+      black: "#000000",
+      white: "#ffffff",
       brand: {
         DEFAULT: "#665886",
         light: "#be9efc",

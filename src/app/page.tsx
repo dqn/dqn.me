@@ -10,6 +10,7 @@ import { RSC } from "../components/RSC";
 import { Section } from "./Section";
 import { List } from "./List";
 import { ProfileHeader } from "./ProfileHeader";
+import { HeaderMenu } from "../components/HeaderMenu";
 
 const client = createClient({
   url: "https://api.dqn.me/graphql",
@@ -69,6 +70,7 @@ const TopPage: NextPage = () => {
         <WanderingGhost />
       </div>
       <div className="absolute inset-0 flex flex-col">
+        <HeaderMenu />
         {/* @ts-expect-error Server Component */}
         <Main />
         <Footer />
