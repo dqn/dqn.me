@@ -8,24 +8,33 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "download-schema": "ts-node scripts/download-schema.ts",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
+    "@urql/core": "^3.2.2",
     "eslint-config-next": "13.2.4",
+    "graphql": "^16.6.0",
     "next": "^13.2.5-canary.7",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "3.2.2",
+    "@graphql-codegen/client-preset": "2.1.1",
+    "@types/dedent": "^0.7.0",
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",
     "@types/tailwindcss": "3.0.11",
     "autoprefixer": "10.4.14",
+    "dedent": "^0.7.0",
     "eslint": "8.36.0",
     "postcss": "8.4.21",
     "prettier": "2.8.4",
     "prettier-plugin-tailwindcss": "0.2.5",
     "tailwindcss": "3.2.7",
+    "ts-node": "^10.9.1",
     "typescript": "5.0.2"
   }
 }

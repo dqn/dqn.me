@@ -1,83 +1,47 @@
 import type { NextPage } from "next";
 import { ExternalLink } from "../components/ExternalLink";
-import avatar from "../../public/avatar.jpg";
 import { Footer } from "../components/Footer";
 import { WanderingGhost } from "../components/WanderingGhost";
 import { HeartIcon } from "../components/HeartIcon";
 import { LinkIcon } from "../components/LinkIcon";
+import { graphql } from "../gql";
+import { createClient } from "@urql/core";
+import { RSC } from "../components/RSC";
+import { Section } from "./Section";
+import { List } from "./List";
+import { ProfileHeader } from "./ProfileHeader";
 
-const ProfileHeader: React.FC = () => {
-  return (
-    <header className="animate-fade-in-and-drop text-center xs:flex xs:justify-center xs:space-x-6">
-      <img
-        src={avatar.src}
-        width={128}
-        height={128}
-        alt="Illustration of my avatar"
-        decoding="async"
-        className="mx-auto rounded-full hover:animate-shake xs:mx-0"
-      />
-      <div className="mt-4 xs:mt-0 xs:flex xs:flex-col xs:items-center xs:justify-center">
-        <h1 className="w-full text-2xl font-bold xs:text-left">dqn</h1>
-        <div className="mx-auto w-[17ch]">
-          <p className="mt-1 w-0 animate-typing overflow-hidden whitespace-nowrap font-semibold">
-            Software Engineer
-          </p>
-        </div>
-      </div>
-    </header>
-  );
-};
+const client = createClient({
+  url: "https://api.dqn.me/graphql",
+});
 
-type ListProps = {
-  items: readonly React.ReactNode[];
-};
-const List: React.FC<ListProps> = ({ items }) => {
-  return (
-    <ul className="list-inside list-disc space-y-2 pl-2 text-sm">
-      {items.map((item, i) => (
-        <li key={i}>{item}</li>
-      ))}
-    </ul>
-  );
-};
+const ProfileQueryDocument = graphql(`
+  query Profile {
+    profile {
+      loves
+      links {
+        id
+        name
+        url
+      }
+    }
+  }
+`);
 
-type SectionProps = {
-  icon: React.ReactNode;
-  label: string;
-  children: React.ReactNode;
-};
-const Section: React.FC<SectionProps> = ({ icon, label, children }) => {
-  return (
-    <section>
-      <h2 className="text-xl font-bold leading-none">
-        <div className="flex items-center space-x-1 ">
-          <div>{icon}</div>
-          <div>{label}</div>
-        </div>
-      </h2>
-      <div className="mt-4">{children}</div>
-    </section>
-  );
-};
+const Main: RSC = async () => {
+  const { data } = await client.query(ProfileQueryDocument, {}).toPromise();
 
-const Main: React.FC = () => {
-  const loves = [
-    "Web",
-    "TypeScript",
-    "React / Next.js",
-  ] as const satisfies readonly string[];
-  const links = [
-    <ExternalLink href="https://github.com/dqn" key="github">
-      GitHub (@dqn)
-    </ExternalLink>,
-    <ExternalLink href="https://twitter.com/dqn270" key="twitter">
-      Twitter (@dqn270)
-    </ExternalLink>,
-    <ExternalLink href="https://zenn.dev/dqn" key="zenn">
-      Zenn (@dqn)
-    </ExternalLink>,
-  ] as const satisfies readonly React.ReactNode[];
+  if (data === undefined) {
+    throw new Error("failed to fetch profile");
+  }
+
+  const links = data.profile.links
+    .filter((link) => link.id !== "homepage")
+    .map((link) => (
+      <ExternalLink href={link.url} key={link.id}>
+        {link.name}
+      </ExternalLink>
+    ));
 
   return (
     <main className="mx-auto flex w-full max-w-screen-xs flex-1 flex-col justify-center p-8">
@@ -85,7 +49,7 @@ const Main: React.FC = () => {
       <article className="mt-20 space-y-12 xs:flex xs:justify-between xs:space-y-0">
         <div className="animate-fade-in-and-drop-100 opacity-0">
           <Section icon={<HeartIcon />} label="Loves">
-            <List items={loves} />
+            <List items={data.profile.loves} />
           </Section>
         </div>
         <div className="animate-fade-in-and-drop-200 opacity-0">
@@ -105,6 +69,7 @@ const TopPage: NextPage = () => {
         <WanderingGhost />
       </div>
       <div className="absolute inset-0 flex flex-col">
+        {/* @ts-expect-error Server Component */}
         <Main />
         <Footer />
       </div>
