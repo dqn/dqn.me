@@ -60,7 +60,7 @@ module.exports = {
         },
       },
       animation: {
-        "fade-in": "fade-in 0.4s ease-out forwards",
+        "fade-in": "fade-in 0.4s linear forwards",
         "fade-in-and-drop": "fade-in-and-drop 0.4s ease-out forwards",
         "fade-in-and-drop-100": "fade-in-and-drop 0.4s ease-out 100ms forwards",
         "fade-in-and-drop-200": "fade-in-and-drop 0.4s ease-out 200ms forwards",
