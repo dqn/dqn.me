@@ -27,20 +27,16 @@ function sample<T>(arr: readonly T[]): T {
   return item;
 }
 
-function useDisplayableSize(
-  ref: React.RefObject<HTMLCanvasElement>,
-): [number, number] {
+function useDisplayableWidth(ref: React.RefObject<HTMLCanvasElement>): number {
   const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
       if (!ref.current?.parentElement) {
         return;
       }
-      const { clientWidth, clientHeight } = ref.current.parentElement;
+      const { clientWidth } = ref.current.parentElement;
       setWidth(clientWidth);
-      setHeight(clientHeight);
     };
 
     window.addEventListener("resize", handleResize);
@@ -50,7 +46,7 @@ function useDisplayableSize(
     return () => window.removeEventListener("resize", handleResize);
   }, [ref]);
 
-  return [width, height];
+  return width;
 }
 
 type Ghost = {
@@ -59,6 +55,7 @@ type Ghost = {
   direction: "left" | "right";
   size: number;
   speed: number;
+  transparency: number;
 };
 
 type CreateGhostParams = {
@@ -75,12 +72,13 @@ function createGhost({ width, height }: CreateGhostParams): Ghost {
     direction: direction,
     size: randomInt(24, 48),
     speed: random(1.2, 3.5),
+    transparency: randomInt(0x10, 0x80),
   };
 }
 
 export const WanderingGhost: React.FC = () => {
   const ref = useRef<HTMLCanvasElement>(null);
-  const [width, height] = useDisplayableSize(ref);
+  const width = useDisplayableWidth(ref);
 
   useEffect(() => {
     if (ref.current === null) {
@@ -89,6 +87,7 @@ export const WanderingGhost: React.FC = () => {
 
     const canvas = ref.current;
 
+    const height = document.documentElement.scrollHeight;
     canvas.width = width;
     canvas.height = height;
 
@@ -119,8 +118,7 @@ export const WanderingGhost: React.FC = () => {
           return;
         }
 
-        const transparency = Math.floor(Math.sin(ghost.x * 0.01) * 0x60) + 0x80;
-        ctx.fillStyle = `#000000${transparency.toString(16)}`;
+        ctx.fillStyle = `#000000${ghost.transparency.toString(16)}`;
         ctx.font = `${ghost.size}px serif`;
         ctx.textAlign = "left";
         if (ghost.direction === "right") {
@@ -146,7 +144,7 @@ export const WanderingGhost: React.FC = () => {
     return () => {
       cancelAnimationFrame(handle);
     };
-  }, [ref, width, height]);
+  }, [ref, width]);
 
   return <canvas ref={ref} />;
 };
