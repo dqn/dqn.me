@@ -16,9 +16,10 @@
     "@urql/core": "^3.2.2",
     "eslint-config-next": "13.2.4",
     "graphql": "^16.6.0",
-    "next": "^13.2.5-canary.7",
+    "next": "^13.2.5-canary.10",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "3.2.2",
