@@ -1,1 +1,1 @@
-export type RSC = () => Promise<JSX.Element>;
+export type RSC<P = {}> = (props: P) => Promise<JSX.Element>;

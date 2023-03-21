@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import { ExternalLink } from "../components/ExternalLink";
 import { Footer } from "../components/Footer";
 import { WanderingGhost } from "../components/WanderingGhost";
@@ -19,6 +18,9 @@ const client = createClient({
 const ProfileQueryDocument = graphql(`
   query Profile {
     profile {
+      id
+      name
+      bio
       loves
       links {
         id
@@ -30,13 +32,18 @@ const ProfileQueryDocument = graphql(`
 `);
 
 const Main: RSC = async () => {
-  const { data } = await client.query(ProfileQueryDocument, {}).toPromise();
+  const { data, error } = await client
+    .query(ProfileQueryDocument, {})
+    .toPromise();
 
   if (data === undefined) {
+    console.error(error);
     throw new Error("failed to fetch profile");
   }
 
-  const links = data.profile.links
+  const { profile } = data;
+
+  const links = profile.links
     .filter((link) => link.id !== "homepage")
     .map((link) => (
       <ExternalLink href={link.url} key={link.id}>
@@ -46,11 +53,11 @@ const Main: RSC = async () => {
 
   return (
     <main className="mx-auto flex w-full max-w-screen-xs flex-1 flex-col justify-center p-8">
-      <ProfileHeader />
+      <ProfileHeader name={profile.name} bio={profile.bio} />
       <article className="mt-20 space-y-12 xs:flex xs:justify-between xs:space-y-0">
         <div className="animate-fade-in-and-drop-100 opacity-0">
           <Section icon={<HeartIcon />} label="Loves">
-            <List items={data.profile.loves} />
+            <List items={profile.loves} />
           </Section>
         </div>
         <div className="animate-fade-in-and-drop-200 opacity-0">
@@ -63,7 +70,7 @@ const Main: RSC = async () => {
   );
 };
 
-const TopPage: NextPage = () => {
+const TopPage: React.FC = () => {
   return (
     <div className="relative min-h-[100svh]">
       <div className="absolute inset-0">

@@ -37,6 +37,8 @@ export type Link = {
 
 export type Profile = {
   __typename?: "Profile";
+  avatarUrl: Scalars["String"];
+  bio: Scalars["String"];
   birthday: Scalars["String"];
   company?: Maybe<Company>;
   email: Scalars["String"];
@@ -59,6 +61,9 @@ export type ProfileQuery = {
   __typename?: "Query";
   profile: {
     __typename?: "Profile";
+    id: string;
+    name: string;
+    bio: string;
     loves: Array<string>;
     links: Array<{
       __typename?: "Link";
@@ -85,6 +90,9 @@ export const ProfileDocument = {
             selectionSet: {
               kind: "SelectionSet",
               selections: [
+                { kind: "Field", name: { kind: "Name", value: "id" } },
+                { kind: "Field", name: { kind: "Name", value: "name" } },
+                { kind: "Field", name: { kind: "Name", value: "bio" } },
                 { kind: "Field", name: { kind: "Name", value: "loves" } },
                 {
                   kind: "Field",
