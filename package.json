@@ -25,7 +25,7 @@
     "@graphql-codegen/cli": "3.2.2",
     "@graphql-codegen/client-preset": "2.1.1",
     "@types/dedent": "^0.7.0",
-    "@types/node": "18.15.10",
+    "@types/node": "18.15.11",
     "@types/react": "18.0.30",
     "@types/tailwindcss": "3.0.11",
     "autoprefixer": "10.4.14",
