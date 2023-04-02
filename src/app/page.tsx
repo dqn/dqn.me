@@ -10,6 +10,7 @@ import { Section } from "./Section";
 import { List } from "./List";
 import { ProfileHeader } from "./ProfileHeader";
 import { HeaderMenu } from "../components/HeaderMenu";
+import { PrettyLink } from "../components/PrettyLink";
 
 const client = createClient({
   url: "https://api.dqn.me/graphql",
@@ -43,13 +44,18 @@ const Main: RSC = async () => {
 
   const { profile } = data;
 
-  const links = profile.links
-    .filter((link) => link.id !== "homepage")
-    .map((link) => (
-      <ExternalLink href={link.url} key={link.id}>
-        {link.name}
-      </ExternalLink>
-    ));
+  const links: React.ReactNode[] = [
+    ...profile.links
+      .filter((link) => link.id !== "homepage")
+      .map((link) => (
+        <ExternalLink href={link.url} key={link.id}>
+          {link.name}
+        </ExternalLink>
+      )),
+    <PrettyLink href="/illustrations" key="illustrations">
+      Illustrations
+    </PrettyLink>,
+  ];
 
   return (
     <main className="mx-auto flex w-full max-w-screen-xs flex-1 flex-col justify-center p-8">
