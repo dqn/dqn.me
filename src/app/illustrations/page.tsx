@@ -9,6 +9,11 @@ import i2023_03_22_kasa_7 from "./2023-03-22-kasa_7.jpg";
 import i2023_03_24_saltchiyiro105 from "./2023-03-24-saltchiyiro105.jpg";
 import { Footer } from "../../components/Footer";
 import { PrettyLink } from "../../components/PrettyLink";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Illustrations",
+};
 
 type Illustration = {
   url: string;
