@@ -80,6 +80,8 @@ const IllustrationsPage: React.FC = () => {
                 <a
                   href={url}
                   className="relative block rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-light"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img
                     src={image.src}
