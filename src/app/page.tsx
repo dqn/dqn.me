@@ -4,7 +4,7 @@ import { WanderingGhost } from "../components/WanderingGhost";
 import { HeartIcon } from "../components/HeartIcon";
 import { LinkIcon } from "../components/LinkIcon";
 import { graphql } from "../gql";
-import { createClient } from "@urql/core";
+import { cacheExchange, createClient, fetchExchange } from "@urql/core";
 import { RSC } from "../components/RSC";
 import { Section } from "./Section";
 import { List } from "./List";
@@ -14,6 +14,7 @@ import { PrettyLink } from "../components/PrettyLink";
 
 const client = createClient({
   url: "https://api.dqn.me/graphql",
+  exchanges: [cacheExchange, fetchExchange],
 });
 
 const ProfileQueryDocument = graphql(`
