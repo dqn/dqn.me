@@ -74,7 +74,7 @@ const IllustrationsPage: React.FC = () => {
       <main className="mx-auto max-w-screen-xs p-8">
         <h1 className="text-lg font-bold">Illustrations</h1>
         <div className="mt-8">
-          <ul className="space-y-4">
+          <ul className="space-y-8">
             {illustrations.map(({ url, image, illustrator, date }) => (
               <li key={url}>
                 <a
