@@ -22,7 +22,7 @@
     "sharp": "^0.32.0"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "3.2.2",
+    "@graphql-codegen/cli": "3.3.0",
     "@graphql-codegen/client-preset": "2.1.1",
     "@types/dedent": "^0.7.0",
     "@types/node": "18.15.11",
