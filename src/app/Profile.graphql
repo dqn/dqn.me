@@ -1,0 +1,13 @@
+query Profile {
+  profile {
+    id
+    name
+    bio
+    loves
+    links {
+      id
+      name
+      url
+    }
+  }
+}

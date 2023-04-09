@@ -10,7 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "download-schema": "ts-node scripts/download-schema.ts",
-    "codegen": "graphql-codegen --config codegen.ts"
+    "codegen": "nitrogql generate"
   },
   "dependencies": {
     "@urql/core": "^4.0.0",
@@ -22,8 +22,9 @@
     "sharp": "^0.32.0"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "3.3.0",
-    "@graphql-codegen/client-preset": "2.1.1",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@nitrogql/cli": "^1.0.0-beta.0",
+    "@nitrogql/graphql-loader": "^1.0.0-beta.0",
     "@types/dedent": "^0.7.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",

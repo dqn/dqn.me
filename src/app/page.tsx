@@ -1,9 +1,9 @@
+import ProfileQuery from "./Profile.graphql";
 import { ExternalLink } from "../components/ExternalLink";
 import { Footer } from "../components/Footer";
 import { WanderingGhost } from "../components/WanderingGhost";
 import { HeartIcon } from "../components/HeartIcon";
 import { LinkIcon } from "../components/LinkIcon";
-import { graphql } from "../gql";
 import { cacheExchange, createClient, fetchExchange } from "@urql/core";
 import { RSC } from "../components/RSC";
 import { Section } from "./Section";
@@ -17,26 +17,8 @@ const client = createClient({
   exchanges: [cacheExchange, fetchExchange],
 });
 
-const ProfileQueryDocument = graphql(`
-  query Profile {
-    profile {
-      id
-      name
-      bio
-      loves
-      links {
-        id
-        name
-        url
-      }
-    }
-  }
-`);
-
 const Main: RSC = async () => {
-  const { data, error } = await client
-    .query(ProfileQueryDocument, {})
-    .toPromise();
+  const { data, error } = await client.query(ProfileQuery, {}).toPromise();
 
   if (data === undefined) {
     console.error(error);

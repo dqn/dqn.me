@@ -1,0 +1,6 @@
+schema: ./src/schema.graphql
+documents: ./src/app/**/*.graphql
+extensions:
+  nitrogql:
+    generate:
+      schemaOutput: ./src/generated/schema.d.ts
