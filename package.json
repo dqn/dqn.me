@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@urql/core": "^4.0.0",
-    "eslint-config-next": "13.2.4",
+    "eslint-config-next": "13.3.0",
     "graphql": "^16.6.0",
     "next": "^13.2.5-canary.10",
     "react": "18.2.0",
@@ -31,12 +31,12 @@
     "@types/tailwindcss": "3.0.11",
     "autoprefixer": "10.4.14",
     "dedent": "^0.7.0",
-    "eslint": "8.37.0",
+    "eslint": "8.38.0",
     "postcss": "8.4.21",
     "prettier": "2.8.7",
-    "prettier-plugin-tailwindcss": "0.2.6",
+    "prettier-plugin-tailwindcss": "0.2.7",
     "tailwindcss": "3.3.1",
     "ts-node": "^10.9.1",
-    "typescript": "5.0.3"
+    "typescript": "5.0.4"
   }
 }
