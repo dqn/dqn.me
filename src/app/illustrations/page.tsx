@@ -8,6 +8,7 @@ import i2023_03_02_B6_kino from "./2023-03-02-B6_kino.jpg";
 import i2023_03_22_kasa_7 from "./2023-03-22-kasa_7.jpg";
 import i2023_03_24_saltchiyiro105 from "./2023-03-24-saltchiyiro105.jpg";
 import i2023_04_07_pkochazukegamma from "./2023-04-07-pkochazukegamma.jpg";
+import i2023_04_13_inomarudayo from "./2023-04-13-inomarudayo.jpg";
 import { Footer } from "../../components/Footer";
 import { PrettyLink } from "../../components/PrettyLink";
 import { Metadata } from "next";
@@ -71,6 +72,12 @@ const illustrations: Illustration[] = [
     image: i2023_04_07_pkochazukegamma,
     illustrator: "pkochazukegamma",
     date: "2023-04-07",
+  },
+  {
+    url: "https://skeb.jp/@inomarudayo/works/10",
+    image: i2023_04_13_inomarudayo,
+    illustrator: "inomarudayo",
+    date: "2023-04-13",
   },
 ];
 
