@@ -161,14 +161,14 @@
   integrity sha512-Reer6rkLLcoOvB0dd66+Y7WrWVFH7sEEkF/4bJCIfsSKnTStTYaHtwIJAwbqnt9I392Tqvku0KkoqZOryWV9LQ==
 
 "@nitrogql/cli@^1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.0.0-beta.0.tgz#2686e54f076195a49fb6a4c9dce5fcf575a30030"
-  integrity sha512-Y+bk1EAXEht+KNCAX0TIWkC9XFkeCy57Qa8saOB9YEsvsyreqyXp2VQZ97+C1Rg/ipMYtfmltpWU83GtwQKkKQ==
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.0.0-beta.1.tgz#c76841f48361a4dd4067ad061d39e87de0ad50ac"
+  integrity sha512-cpIhxHUodAAEahO1nrC0qS4pqxe+tsA3oDj976TFBYlbm+cwJQaK96aZV5bBBhKxbbcEeTWKtCzTp9vw6PFkXg==
 
 "@nitrogql/graphql-loader@^1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.0.0-beta.0.tgz#afb9324790cb1fc9e5dc57c494cc4528396ef976"
-  integrity sha512-iGvwrFqZFJGxEGtn8aAs7jiGT/ABNjjvVgDkxYHvjdIJZUfPwCArSzS7hBb78T//s5jjHxqqvZKYmYheDrNb9Q==
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.0.0-beta.1.tgz#dd7939ffbb19807fcdd808dc8a4d81661e06be37"
+  integrity sha512-ugfpxr3L6uUb11rmsSG/1H/EZ9/6TZ8jKrrTc8MudFhKx0OIGtxSC5Y/5wMiK1eJTOHO3faVhhtSgsUfmhqiFw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
