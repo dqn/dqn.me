@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
 import { HeaderMenu } from "../../components/HeaderMenu";
-import i2021_11_28_sgkertomu from "./2021-11-28-sgkertomu.jpg";
+import i2021_11_28_sgkertomu_0 from "./2021-11-28-sgkertomu-0.jpg";
+import i2021_11_28_sgkertomu_1 from "./2021-11-28-sgkertomu-1.jpg";
 import i2022_07_02_pkochazukegamma from "./2022-07-02-pkochazukegamma.jpg";
 import i2023_02_24_shirofox from "./2023-02-24-shirofox.jpg";
 import i2023_02_27_dksg4 from "./2023-02-27-dksg4.jpg";
@@ -9,6 +10,7 @@ import i2023_03_22_kasa_7 from "./2023-03-22-kasa_7.jpg";
 import i2023_03_24_saltchiyiro105 from "./2023-03-24-saltchiyiro105.jpg";
 import i2023_04_07_pkochazukegamma from "./2023-04-07-pkochazukegamma.jpg";
 import i2023_04_13_inomarudayo from "./2023-04-13-inomarudayo.jpg";
+import i2023_04_22_popotowari from "./2023-04-22-popotowari.jpg";
 import { Footer } from "../../components/Footer";
 import { PrettyLink } from "../../components/PrettyLink";
 import { Metadata } from "next";
@@ -27,7 +29,13 @@ type Illustration = {
 const illustrations: Illustration[] = [
   {
     url: "https://twitter.com/sgkertomu/status/1464663035537080328",
-    image: i2021_11_28_sgkertomu,
+    image: i2021_11_28_sgkertomu_0,
+    illustrator: "sgkertomu",
+    date: "2021-11-28",
+  },
+  {
+    url: "https://twitter.com/sgkertomu/status/1464663035537080328",
+    image: i2021_11_28_sgkertomu_1,
     illustrator: "sgkertomu",
     date: "2021-11-28",
   },
@@ -79,18 +87,24 @@ const illustrations: Illustration[] = [
     illustrator: "inomarudayo",
     date: "2023-04-13",
   },
+  {
+    url: "https://skeb.jp/@popotowari/works/1185",
+    image: i2023_04_22_popotowari,
+    illustrator: "popotowari",
+    date: "2023-04-22",
+  },
 ];
 
 const IllustrationsPage: React.FC = () => {
   return (
     <>
       <HeaderMenu />
-      <main className="mx-auto max-w-screen-xs p-8">
+      <main className="mx-auto max-w-screen-lg p-8">
         <h1 className="text-lg font-bold">Illustrations</h1>
         <div className="mt-8">
-          <ul className="space-y-8">
+          <ul className="columns-1 gap-x-4 xs:columns-2 lg:columns-3">
             {illustrations.map(({ url, image, illustrator, date }) => (
-              <li key={url}>
+              <li key={url} className="mb-4">
                 <a
                   href={url}
                   className="relative block rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-light"
@@ -102,9 +116,9 @@ const IllustrationsPage: React.FC = () => {
                     width={image.width}
                     height={image.height}
                     alt={`Illustration by @${illustrator}`}
-                    className="rounded-lg"
+                    className="w-full rounded-lg"
                   />
-                  <div className="absolute inset-x-0 bottom-0 flex justify-between rounded-b-lg bg-black/80 p-4">
+                  <div className="absolute inset-x-0 bottom-0 flex justify-between rounded-b-lg bg-black/80 p-4 text-sm">
                     <time dateTime={date}>{date}</time>
                     <span>@{illustrator}</span>
                   </div>

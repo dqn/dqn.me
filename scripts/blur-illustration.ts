@@ -1,8 +1,8 @@
+import { parse } from "path";
 import sharp from "sharp";
 
-const width = 512;
-const height = 384;
-const sigma = 10;
+const width = 128;
+const sigma = 4;
 
 async function main(): Promise<void> {
   const imagePath = process.argv[2];
@@ -13,10 +13,10 @@ async function main(): Promise<void> {
   }
 
   await sharp(imagePath)
-    .resize(width, height)
+    .resize(width)
     .blur(sigma)
     .toFormat("jpg")
-    .toFile(imagePath.replace(".png", ".jpg"));
+    .toFile(parse(imagePath).name + "-blurred.jpg");
 }
 
 main().catch((err) => {

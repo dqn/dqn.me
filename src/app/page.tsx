@@ -41,19 +41,15 @@ const Main: RSC = async () => {
   ];
 
   return (
-    <main className="mx-auto flex w-full max-w-screen-xs flex-1 flex-col justify-center p-8">
+    <main className="mx-auto flex w-full max-w-screen-lg flex-1 flex-col justify-center p-8">
       <ProfileHeader name={profile.name} bio={profile.bio} />
-      <article className="mt-20 space-y-12 xs:flex xs:justify-between xs:space-y-0">
-        <div className="animate-fade-in-and-drop-100 opacity-0">
-          <Section icon={<HeartIcon />} label="Loves">
-            <List items={profile.loves} />
-          </Section>
-        </div>
-        <div className="animate-fade-in-and-drop-200 opacity-0">
-          <Section icon={<LinkIcon />} label="Links">
-            <List items={links} />
-          </Section>
-        </div>
+      <article className="mt-20 space-y-12 xs:flex xs:justify-evenly xs:space-y-0">
+        <Section icon={<HeartIcon />} label="Loves">
+          <List items={profile.loves} />
+        </Section>
+        <Section icon={<LinkIcon />} label="Links">
+          <List items={links} />
+        </Section>
       </article>
     </main>
   );
