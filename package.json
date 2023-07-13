@@ -32,7 +32,7 @@
     "autoprefixer": "10.4.14",
     "dedent": "^0.7.0",
     "eslint": "8.44.0",
-    "postcss": "8.4.25",
+    "postcss": "8.4.26",
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "0.4.0",
     "serve": "^14.2.0",
