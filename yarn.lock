@@ -312,16 +312,16 @@
   integrity sha512-Z+56e/Ljt0bUs+T+jPjhFyxYBcdY2RIq9ELFU+qAMQMteHo7ymbV7CKmlcX59RI9C4YzN8PgMgLyAoi916b5HA==
 
 "@nitrogql/cli@^1.0.0-beta.0":
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.0.0-beta.5.tgz#2ad3bc1ce2e6f36fb2afe5c7171cbb9662eff164"
-  integrity sha512-GHVBJ8ACVbbPcddPMzY7cZ18m+3vSztQ7Y6DmG06ZUKAm0yOc2+eXwyMT6lLXFTOSvJ5hMJEwcjf3D8AMoInCA==
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.0.0-beta.6.tgz#8f8002638d8966294302df9d4bcec50b3f7c4e8c"
+  integrity sha512-wqyM4xc80Da46p3dqrOF7HeRxty+bIy4+wUHzTsvYZuNK+lvwdNqZwMJnWRoXC2Nicug1de0Cc9H1jzPC1vdDw==
   dependencies:
-    "@nitrogql/core" "1.0.0-beta.5"
+    "@nitrogql/core" "1.0.0-beta.6"
 
-"@nitrogql/core@1.0.0-beta.5":
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.0.0-beta.5.tgz#aa42980991848ffd44ee09f242cfb814737df8d8"
-  integrity sha512-GXNs/ea23iNbdV1HLv45mBo8NBEeQEAwV35iFD2wRlFaYCJwPghidhwzFuilDphsxJoWSgGkdpGaY8LL84EPBw==
+"@nitrogql/core@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.0.0-beta.6.tgz#3aa56bc8e3c3cf6c22cbc70421bbf0f08a9c9d9f"
+  integrity sha512-JEVht2WCM+UrlQkmJkCcKl88mPIr5FV4ymH/8Wl4P4WoexrvZyP+8FeDG1s6yG5LgXn+xZrT8SF9g3q+o+rTaw==
 
 "@nitrogql/graphql-loader@^1.0.0-beta.0":
   version "1.0.0-beta.5"
