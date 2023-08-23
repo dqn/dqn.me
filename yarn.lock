@@ -312,21 +312,27 @@
   integrity sha512-YzA78jBDXMYiINdPdJJwGgPNT3YqBNNGhsthsDoWHL9p24tEJn9ViQf/ZqTbwSpX/RrkPupLfuuTH2sf73JBAw==
 
 "@nitrogql/cli@^1.0.0-beta.0":
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.0.0-beta.6.tgz#8f8002638d8966294302df9d4bcec50b3f7c4e8c"
-  integrity sha512-wqyM4xc80Da46p3dqrOF7HeRxty+bIy4+wUHzTsvYZuNK+lvwdNqZwMJnWRoXC2Nicug1de0Cc9H1jzPC1vdDw==
+  version "1.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.0.0-beta.7.tgz#3910c785df499cf7c13f09102f2790635da5b5dc"
+  integrity sha512-ZO5xJWJuO7JGqqcTK/j/Zwh95o+LrQOYa7uoXE/j8VBxhZrIb3hAVCmx2Q3hmSTiAGS49lsy2YFY04kjqITwXw==
   dependencies:
-    "@nitrogql/core" "1.0.0-beta.6"
+    "@nitrogql/core" "1.0.0-beta.7"
+    "@nitrogql/wasi-preview1" "1.0.0-beta.7"
 
-"@nitrogql/core@1.0.0-beta.6":
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.0.0-beta.6.tgz#3aa56bc8e3c3cf6c22cbc70421bbf0f08a9c9d9f"
-  integrity sha512-JEVht2WCM+UrlQkmJkCcKl88mPIr5FV4ymH/8Wl4P4WoexrvZyP+8FeDG1s6yG5LgXn+xZrT8SF9g3q+o+rTaw==
+"@nitrogql/core@1.0.0-beta.7":
+  version "1.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.0.0-beta.7.tgz#fc7dd91d5a2f81e030d6c54ac7993f2308337038"
+  integrity sha512-3adJkoMhvgc9sNG9Qjep+N9cJljAh3MXu02cCmm7mdvIi7oZkC8TmQ/YqxsTK8o61T6ixKVIysNv581dW2yzPQ==
 
 "@nitrogql/graphql-loader@^1.0.0-beta.0":
   version "1.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.0.0-beta.6.tgz#e5e60ebfc9f6814a491e6c9deabe83e6fe89d8ea"
   integrity sha512-RdHlF+2dqMjBlrnw1RP9ceRl9M5yJj189SlEFu/SG3TSPhBk1yYjGNnyzAlA4B5IFJeJFutyM0tkjslhAj8YUA==
+
+"@nitrogql/wasi-preview1@1.0.0-beta.7":
+  version "1.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@nitrogql/wasi-preview1/-/wasi-preview1-1.0.0-beta.7.tgz#6165f593628b25ff69de2763318622fa7a600c15"
+  integrity sha512-t/eHQKiiyczMEMA9Len5lWD4QobPIsL2RGQwcFHeCtzm2VtbSO+k73oZWRuF/YEfjilL8uo56WCZSL+bJISasQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
