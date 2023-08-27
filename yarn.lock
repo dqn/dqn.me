@@ -312,27 +312,27 @@
   integrity sha512-YzA78jBDXMYiINdPdJJwGgPNT3YqBNNGhsthsDoWHL9p24tEJn9ViQf/ZqTbwSpX/RrkPupLfuuTH2sf73JBAw==
 
 "@nitrogql/cli@^1.0.0-beta.0":
-  version "1.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.0.0-beta.8.tgz#86baa027d24e52875bad089948083c562dc08685"
-  integrity sha512-I7zetVnDIFUFlHeSQuphcpzMeFZHaE7/jgdGvtAfVfBhbSr3JGfh39lE1Rjc7XPaNwpI0soI7h/aZIUInmgcDg==
+  version "1.0.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.0.0-beta.11.tgz#f034aec158dd8480bf580fb37c0bcae6d0dcd261"
+  integrity sha512-UysDfilN7SnBZork4JvUOlmxz8Kery/N6iIdgsv5tVcHA5xHQkEagLOrioT3uqRsy1i2bhgVSNnFqPrtSVIFRw==
   dependencies:
-    "@nitrogql/core" "1.0.0-beta.8"
-    "@nitrogql/wasi-preview1" "1.0.0-beta.8"
+    "@nitrogql/core" "1.0.0-beta.11"
+    "@nitrogql/wasi-preview1" "1.0.0-beta.11"
 
-"@nitrogql/core@1.0.0-beta.8":
-  version "1.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.0.0-beta.8.tgz#8266594ec59b79528c410f7f32fd35ef5913e156"
-  integrity sha512-rlcO7cKV7FP/G2U4ZrcrLPgkEiydl4fgE9dWEGjzeab+ayV86CF6L/Lq1a7s2NggSVRk8Rq3LWeBB+76EZKOlA==
+"@nitrogql/core@1.0.0-beta.11":
+  version "1.0.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.0.0-beta.11.tgz#2c81da2947c0130125562b237ae62d46a12adaa5"
+  integrity sha512-EAKLPu1JVWQyacJvROFtf6fcdxWl1xDScoSoFdaA6mG9xcNz68WhaxZIab1S3lhhr1y2ccHwOGmTh72FWVGKkw==
 
 "@nitrogql/graphql-loader@^1.0.0-beta.0":
   version "1.0.0-beta.8"
   resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.0.0-beta.8.tgz#bf0a86723591736f8b8c0432a59e4b73f8686a29"
   integrity sha512-P6gBNLUXwGW1Z5M4k8H9jg95+eO178QfHCfVfp0bXmwed8BrpN+C44uqoujAboTGm2rAX0LuFa1iy4/nkw9nlg==
 
-"@nitrogql/wasi-preview1@1.0.0-beta.8":
-  version "1.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/@nitrogql/wasi-preview1/-/wasi-preview1-1.0.0-beta.8.tgz#ad9077dc81ae61e3c25f7031c0b896c872cd8992"
-  integrity sha512-H4RgHZ4IL8uRaewRWVcMSebo964OHJiY+M/U1mp/tX+sxc5/b4yAs/rrz65WQ2zKE47dekah8jXSt8YlwKeSSw==
+"@nitrogql/wasi-preview1@1.0.0-beta.11":
+  version "1.0.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@nitrogql/wasi-preview1/-/wasi-preview1-1.0.0-beta.11.tgz#ecc1181192151314e780ce93fcb68850b8ac2cb4"
+  integrity sha512-NoQJbvRr5efU4i4o6PwbM2sOx+FZDMnU0uW3rPZm9xQSJODRM3gJA8eNZIjll1DueNpwtVPwWrweM1I9VARnnw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
