@@ -325,9 +325,9 @@
   integrity sha512-vwyakP8PpKX3RfEMNt6hLWGNcXFFaDATs43IPU3NK2QXdvbDe5eFqCtMLP6lrz3dS6WsgtFf4PqRRuSSueiv4A==
 
 "@nitrogql/graphql-loader@^1.0.0-beta.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.0.0.tgz#91edb712265fedeb4d92ff42799b8eb7be300224"
-  integrity sha512-oCiC3FV1/E295rrX2uYFZrcw+fmgSzbRAr27a0mXvBGjfQP9hUfXHs5o2C9duNyo/YbvbSgJYs7saMJQ71kB5Q==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.1.0.tgz#53fc399292be1c2b42912cc9b977a7f2c3df2758"
+  integrity sha512-5suC/awjX0W1JJRLowkkGnphZPBNnWsSoiL2FYe0ag0N1S9PFQdFZy2+f+F6ybf1ffyGMXBJaz2viSSZpHxLZg==
 
 "@nitrogql/wasi-preview1@1.1.0":
   version "1.1.0"
