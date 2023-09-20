@@ -29,7 +29,7 @@
     "@types/node": "18.17.18",
     "@types/react": "18.2.22",
     "@types/tailwindcss": "3.0.11",
-    "autoprefixer": "10.4.15",
+    "autoprefixer": "10.4.16",
     "dedent": "^0.7.0",
     "eslint": "8.49.0",
     "postcss": "8.4.30",
