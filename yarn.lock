@@ -406,9 +406,11 @@
     esbuild-register "^3.5.0"
 
 "@nitrogql/graphql-loader@^1.0.0-beta.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.1.0.tgz#53fc399292be1c2b42912cc9b977a7f2c3df2758"
-  integrity sha512-5suC/awjX0W1JJRLowkkGnphZPBNnWsSoiL2FYe0ag0N1S9PFQdFZy2+f+F6ybf1ffyGMXBJaz2viSSZpHxLZg==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.2.0.tgz#300e79f144a40046883cf085af7f68ca2030a772"
+  integrity sha512-nALXSp5Tz2+LSTi8PXpg8A/+na7gTileG3sQWfC0orPPyaVjXg4Cx0+3v/Wbh5UMsx3TCg8t44qJedJoDYbBZw==
+  dependencies:
+    "@nitrogql/core" "1.2.0"
 
 "@nitrogql/wasi-preview1@1.2.0":
   version "1.2.0"
