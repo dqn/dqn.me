@@ -390,17 +390,25 @@
   integrity sha512-cyRvlAxwlddlqeB9xtPSfNSCRy8BOa4wtMo0IuI9P7Y0XT2qpDrpFKRyZ7kUngZis59mPVla5k8X1oOJ8RxDYg==
 
 "@nitrogql/cli@^1.0.0-beta.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.2.0.tgz#cb5d68ee1fd220223d3f6af37d6490536f8844b8"
-  integrity sha512-XHTJCRvp2LInXBusXpB71oahgtZOpsmkXx66I+o7jgqtS7VvguH5BM3O7rWTyy6XwruoQpxK3k5D9PyhxFOdQg==
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.3.0.tgz#9f41b030aff47c23413ecc354ce8bbbc2639aa99"
+  integrity sha512-GZBb39buRNvOWfh20jKYxPS7p6PsJKuEjy32WGEtbRnlPZBG8X5TQC38uKRxfxfmAlPY7GoODL+s4quqdjfF7w==
   dependencies:
-    "@nitrogql/core" "1.2.0"
-    "@nitrogql/wasi-preview1" "1.2.0"
+    "@nitrogql/core" "1.3.0"
+    "@nitrogql/wasi-preview1" "1.3.0"
 
 "@nitrogql/core@1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.2.0.tgz#5a38fb235c35de8382d9bd4060118c0f545eda71"
   integrity sha512-mTC0q4jfTJ1ruWBbSOnUCvCptuQIhXaINjpoCMkIQqEHKLiZXa1uHHDTfVA6JdnETmrgnHXk4H5PeN1ixV8Z5w==
+  dependencies:
+    esbuild "0.x"
+    esbuild-register "^3.5.0"
+
+"@nitrogql/core@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.3.0.tgz#dd57267fb8cf54140376ee3d3743d88676d09122"
+  integrity sha512-aoXQEFut+CzhMwFR/W6yzZ9KwfXmIBeccfye1KO/5pxEJ8S8pQitNrykys5Fge4XaXJprrQ4UhmLkmYzxSjsTQ==
   dependencies:
     esbuild "0.x"
     esbuild-register "^3.5.0"
@@ -412,10 +420,10 @@
   dependencies:
     "@nitrogql/core" "1.2.0"
 
-"@nitrogql/wasi-preview1@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@nitrogql/wasi-preview1/-/wasi-preview1-1.2.0.tgz#afeac0795ef9664f7d9c391a2b14a263d909b92f"
-  integrity sha512-begkCNTlIGp7oG7LCd/4yc0ePYRefwJY8i0PkcH0zWxMndpovNjSpUENP6lL4K0EoWsUnvGcVbVWintXj9eQew==
+"@nitrogql/wasi-preview1@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@nitrogql/wasi-preview1/-/wasi-preview1-1.3.0.tgz#6ab2371340c76993d3784aadcc78f2f245d7080e"
+  integrity sha512-vhnq49SkRqBar3xmEAtxKJimzeYrKfpLYJykrHuvX6hmuD3yZ1IRra1B6uFrMHcimqxpXIY7Rx0iV27ZnCTEWw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
