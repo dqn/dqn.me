@@ -31,7 +31,7 @@
     "@types/tailwindcss": "3.0.11",
     "autoprefixer": "10.4.16",
     "dedent": "^0.7.0",
-    "eslint": "8.51.0",
+    "eslint": "8.52.0",
     "postcss": "8.4.31",
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "0.5.6",
