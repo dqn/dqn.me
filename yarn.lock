@@ -397,14 +397,6 @@
     "@nitrogql/core" "1.3.2"
     "@nitrogql/wasi-preview1" "1.3.2"
 
-"@nitrogql/core@1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.3.1.tgz#35e3ea301d365ac44d28b9c024b60996e9dacb61"
-  integrity sha512-wgJ60cpyeMENgGw7/kSNryaSQj1OEVbW4rpjnUicocfIV1AwXEU+pVksH4hvfm/ulm2e7F3LDYK+Yv93puJviA==
-  dependencies:
-    "@nitrogql/esbuild-register" "1.3.1"
-    esbuild "0.x"
-
 "@nitrogql/core@1.3.2":
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.3.2.tgz#e3ea08ba5cc534b8fb824fed255a742064ce872a"
@@ -412,15 +404,6 @@
   dependencies:
     "@nitrogql/esbuild-register" "1.3.2"
     esbuild "0.x"
-
-"@nitrogql/esbuild-register@1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@nitrogql/esbuild-register/-/esbuild-register-1.3.1.tgz#b0c38f98233518aa6224039300f97ed3f1cb7d37"
-  integrity sha512-RGV86koJOwNPFh/Cc9+Lbz4iZOS9zNoM8SaGxyxG6C1nA7BBqS7WTvgUVNk4Ec48aXuuDQe3HVw7eNUCp2hopA==
-  dependencies:
-    esbuild ">=0.19.5 && <1"
-    jsonc-parser "^3.2.0"
-    pirates "^4.0.6"
 
 "@nitrogql/esbuild-register@1.3.2":
   version "1.3.2"
@@ -432,11 +415,11 @@
     pirates "^4.0.6"
 
 "@nitrogql/graphql-loader@^1.0.0-beta.0":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.3.1.tgz#d087d2c05ef757c627e809c2cd61e6751968f06f"
-  integrity sha512-NmccdVlWQZO1KWXLOq6QDkziaHHf9VO7ohLRDAPSpjr9gQCRH1hH3gJzq+DWRPesZ3Ntc9xWVmhGCXNvXLd9sQ==
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.3.2.tgz#357aad4b76d027b1daca0adb8668609becb967c6"
+  integrity sha512-kQRMQCQSaKQQvVFsASlbshVNlWt5awz/6tmYxsIUjYTgoxGy7gxoIvfU9VvP2GwjFsrDxIVA4191MyeE7tOliw==
   dependencies:
-    "@nitrogql/core" "1.3.1"
+    "@nitrogql/core" "1.3.2"
 
 "@nitrogql/wasi-preview1@1.3.2":
   version "1.3.2"
