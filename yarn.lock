@@ -517,14 +517,6 @@
     "@nitrogql/core" "1.4.0"
     "@nitrogql/wasi-preview1" "1.4.0"
 
-"@nitrogql/core@1.3.4":
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.3.4.tgz#192b9cba56b62c476f01eed3d02806b64a13cefb"
-  integrity sha512-X15/uXN4BvLu5G49ORdkzKxXcIGaNmmyOTRPLQR/KEv49fZ0cgmXt5Pn/4YoF0CYdtJ7ePSiIN2blLWg8RgTIw==
-  dependencies:
-    "@nitrogql/esbuild-register" "1.3.4"
-    esbuild "0.x"
-
 "@nitrogql/core@1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.4.0.tgz#d6dc7ad2d116b11cb09a9d62f6a8fe63cffbb469"
@@ -532,15 +524,6 @@
   dependencies:
     "@nitrogql/esbuild-register" "1.4.0"
     esbuild "0.x"
-
-"@nitrogql/esbuild-register@1.3.4":
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/@nitrogql/esbuild-register/-/esbuild-register-1.3.4.tgz#1683479898b0b41a22a571c85481d90d823c4eb3"
-  integrity sha512-Dh3kGe5HYVTfI8Kel3IsRBwlv71wjJkCF4MpchU7rlz/jiakCIRC/9lO+gpWZHSSSC+64QJKbE4xwGh25ZrcFg==
-  dependencies:
-    esbuild ">=0.19.5 && <1"
-    jsonc-parser "^3.2.0"
-    pirates "^4.0.6"
 
 "@nitrogql/esbuild-register@1.4.0":
   version "1.4.0"
@@ -552,11 +535,17 @@
     pirates "^4.0.6"
 
 "@nitrogql/graphql-loader@^1.0.0-beta.0":
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.3.4.tgz#9526a3f974651540b26a1b557cf211daa1b08e9f"
-  integrity sha512-DkxeX0ik6Rwzgp2LuO+uMhNlvb2rNP/UYc0xHvQAsi3b+7GPm5VMrO1pvRuYyys3BSvpEHXEOBgVwiiLMZvxxg==
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.4.0.tgz#10e831cd562b5e018a0574d068ac9a9e8c16cf12"
+  integrity sha512-4vzOZgk8k0fl6sUgywKrih4ETWV5KC7OrzWIR7zRkjCPnglo974KBfBe8kHHfXEGoYNLvTuvTz0OG1RecsFMpw==
   dependencies:
-    "@nitrogql/core" "1.3.4"
+    "@nitrogql/core" "1.4.0"
+    "@nitrogql/loader-core" "1.4.0"
+
+"@nitrogql/loader-core@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@nitrogql/loader-core/-/loader-core-1.4.0.tgz#809a096e3f17016e9f26e8f33cb8eb71a5cf336a"
+  integrity sha512-xLDWZizaXrUz3P3pE5NaDcdSX661w6a3nTdQ0VUtLF/Ir7NW2XKIBElXj86wmhfjakHSQ8wmBjFF4Vd6kWEEqA==
 
 "@nitrogql/wasi-preview1@1.4.0":
   version "1.4.0"
