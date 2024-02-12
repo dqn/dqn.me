@@ -522,14 +522,6 @@
     "@nitrogql/core" "1.6.2"
     "@nitrogql/wasi-preview1" "1.6.2"
 
-"@nitrogql/core@1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.6.1.tgz#e1909fba97dc09687415056f27a9d968101ba956"
-  integrity sha512-ORtvpw+PY/RWgce5q0gN8PUAJx0AmzkoJWkYmHWViH9yqz/9cWdrh1nDJj8ONCANoZigQgS6DcvastliLRZqTw==
-  dependencies:
-    "@nitrogql/esbuild-register" "1.6.1"
-    esbuild "0.x"
-
 "@nitrogql/core@1.6.2":
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.6.2.tgz#4cda13831c1c59194512544ca6a9c668309bee83"
@@ -537,15 +529,6 @@
   dependencies:
     "@nitrogql/esbuild-register" "1.6.2"
     esbuild "0.x"
-
-"@nitrogql/esbuild-register@1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@nitrogql/esbuild-register/-/esbuild-register-1.6.1.tgz#018e341dd78e93cd40e80e2facd5a17844908d10"
-  integrity sha512-nUrg5vj/rG1VzsIU6zXjH1RUA4d19i4J6EhQ+DHd5S+TskZwWkg2uansGifp5JN6BVfS2KS1625+d8QFh52KCw==
-  dependencies:
-    esbuild ">=0.19.5 && <1"
-    jsonc-parser "^3.2.0"
-    pirates "^4.0.6"
 
 "@nitrogql/esbuild-register@1.6.2":
   version "1.6.2"
@@ -557,17 +540,17 @@
     pirates "^4.0.6"
 
 "@nitrogql/graphql-loader@^1.0.0-beta.0":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.6.1.tgz#e9d51cb311355d380c3bcdb15464a24326479269"
-  integrity sha512-6KT+r+CeIDWAgg1UXRdqHtyucFX8W3mJQmBH5Mb0sdzcRu01mTSFxOw6lEk3UiaiqjikOELM4qCw+1uTuFqz0A==
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@nitrogql/graphql-loader/-/graphql-loader-1.6.2.tgz#27bd8b9ce9e496e036a908f30a5a34b2dad88fa1"
+  integrity sha512-BJpnIcDd1I6TLho+/FEXsCgT9U0VUX3Pa9gxVMOTip1x3aY1Ft4Qrh9UtGIV5zFcoLg4qoW3Qs/1qfwnSjVOIA==
   dependencies:
-    "@nitrogql/core" "1.6.1"
-    "@nitrogql/loader-core" "1.6.1"
+    "@nitrogql/core" "1.6.2"
+    "@nitrogql/loader-core" "1.6.2"
 
-"@nitrogql/loader-core@1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@nitrogql/loader-core/-/loader-core-1.6.1.tgz#ecf5690c90e26fb80b29af75efeec9fb08e48f5d"
-  integrity sha512-QX3PVHLeK5G2Qwxj5/uz1M5JZhmhBJRZx9SkfwdE7Ls6rx8cG64I0mihf0nvcnZuwNvxwN2iMRT2ig5rkSfNIQ==
+"@nitrogql/loader-core@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@nitrogql/loader-core/-/loader-core-1.6.2.tgz#52d0f60bf3d9c02ffdcc3b6158b16c2d976b780c"
+  integrity sha512-NovOgYajxgAXDKx+SiSqD0prXyRRSF74X6pYuolGsvvS6MZtoqim01V6zGHfcoFFhgrkMavcO/R7+jJWh/JVnA==
 
 "@nitrogql/wasi-preview1@1.6.2":
   version "1.6.2"
