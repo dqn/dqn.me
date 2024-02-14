@@ -515,12 +515,12 @@
   integrity sha512-Cqfe1YmOS7k+5mGu92nl5ULkzpKuxJrP3+4AEuPmrpFZ3BHxTY3TnHmU1On3bFmFFs6FbTcdF58CCUProGpIGQ==
 
 "@nitrogql/cli@^1.0.0-beta.0":
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.6.2.tgz#9821bbcd74a3baa58d481a79f5205b8d532e7d1a"
-  integrity sha512-cTqXzAW6Vc/LqU9+O2DRncuAbSaSXzW1f1uwvqyLW6stQSBIgScLORBmjjgB1v4IY1sFmpc0LIFrEsohzz4zFg==
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@nitrogql/cli/-/cli-1.6.3.tgz#abca8eac2564efdae941da71f7e03dc39fb255b0"
+  integrity sha512-7PiqgyGTcacg8CbVmhkQnsh2bH4bjQKafgxGEzBTNx2+7DKlFP9877VfwS9nJpgsTUgZILpQxO5c5AvhytDJWA==
   dependencies:
-    "@nitrogql/core" "1.6.2"
-    "@nitrogql/wasi-preview1" "1.6.2"
+    "@nitrogql/core" "1.6.3"
+    "@nitrogql/wasi-preview1" "1.6.3"
 
 "@nitrogql/core@1.6.2":
   version "1.6.2"
@@ -530,10 +530,27 @@
     "@nitrogql/esbuild-register" "1.6.2"
     esbuild "0.x"
 
+"@nitrogql/core@1.6.3":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@nitrogql/core/-/core-1.6.3.tgz#9e481d731ad842a77e70803455a53ccfc02759d2"
+  integrity sha512-4maC36SDq6hvZWE8TjYl4j3NTRst+UUVKJH94YxjhTdRq4X96+3RbbhSA18zTlpp6HXSCeDsgjmD79NPf4BqLw==
+  dependencies:
+    "@nitrogql/esbuild-register" "1.6.3"
+    esbuild "0.x"
+
 "@nitrogql/esbuild-register@1.6.2":
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/@nitrogql/esbuild-register/-/esbuild-register-1.6.2.tgz#47091fe6e2dfd3bd867907b88c0a9524b54db186"
   integrity sha512-lAw/8k58Y8ezoiee+ZmEHChmZp+dAG8MjExVxceXupeHJC1R869TgUaOoO5v/NkWCaXfrVdzmn94wpXvz51Opw==
+  dependencies:
+    esbuild ">=0.19.5 && <1"
+    jsonc-parser "^3.2.0"
+    pirates "^4.0.6"
+
+"@nitrogql/esbuild-register@1.6.3":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@nitrogql/esbuild-register/-/esbuild-register-1.6.3.tgz#88e46b24154491300d520b1362984141b05cb3a6"
+  integrity sha512-icJN+lK+hy//RbwNXkC879KcWjbqB489GEbqMTIJP1KYyw8+AN1m9ICkSQ5qP3ROCh+kVbu5S+2BVPpjLkAu3g==
   dependencies:
     esbuild ">=0.19.5 && <1"
     jsonc-parser "^3.2.0"
@@ -552,10 +569,10 @@
   resolved "https://registry.yarnpkg.com/@nitrogql/loader-core/-/loader-core-1.6.2.tgz#52d0f60bf3d9c02ffdcc3b6158b16c2d976b780c"
   integrity sha512-NovOgYajxgAXDKx+SiSqD0prXyRRSF74X6pYuolGsvvS6MZtoqim01V6zGHfcoFFhgrkMavcO/R7+jJWh/JVnA==
 
-"@nitrogql/wasi-preview1@1.6.2":
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/@nitrogql/wasi-preview1/-/wasi-preview1-1.6.2.tgz#932fc4558bc3a742fd9dd04f8105d54c7ac77337"
-  integrity sha512-x7vbIP+AAcJsBLzg+DDcJ/kqlzlSweH2iJyYF99dMLQGYcvoLL3AnI3rFiGpG8BggpC33hl3bEO11eve5FVSvg==
+"@nitrogql/wasi-preview1@1.6.3":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@nitrogql/wasi-preview1/-/wasi-preview1-1.6.3.tgz#9545b04f85869cd351966f8e211c41a8b524e4e6"
+  integrity sha512-M/VT+3esUs+GG8HXDo+f29p4wEURbJV1+NqCI76HHMn+m20VR0vNcQR82O8+xB20Z9u7ePsCvdcVnP7NrEAfvw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
