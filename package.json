@@ -30,7 +30,7 @@
     "@types/react": "18.2.67",
     "@types/tailwindcss": "3.1.0",
     "autoprefixer": "10.4.19",
-    "dedent": "^0.7.0",
+    "dedent": "^1.0.0",
     "eslint": "8.57.0",
     "postcss": "8.4.37",
     "prettier": "2.8.8",
