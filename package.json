@@ -27,7 +27,7 @@
     "@nitrogql/graphql-loader": "^1.0.0-beta.0",
     "@types/dedent": "^0.7.0",
     "@types/node": "18.19.30",
-    "@types/react": "18.2.74",
+    "@types/react": "18.2.75",
     "@types/tailwindcss": "3.1.0",
     "autoprefixer": "10.4.19",
     "dedent": "^0.7.0",
