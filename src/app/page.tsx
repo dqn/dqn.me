@@ -10,7 +10,6 @@ import { Section } from "./Section";
 import { List } from "./List";
 import { ProfileHeader } from "./ProfileHeader";
 import { HeaderMenu } from "../components/HeaderMenu";
-import { PrettyLink } from "../components/PrettyLink";
 
 const client = createClient({
   url: "https://api.dqn.me/graphql",
@@ -35,9 +34,6 @@ const Main: RSC = async () => {
           {link.name}
         </ExternalLink>
       )),
-    <PrettyLink href="/illustrations" key="illustrations">
-      Illustrations
-    </PrettyLink>,
   ];
 
   return (
@@ -63,7 +59,7 @@ const TopPage: React.FC = () => {
       </div>
       <div className="absolute inset-0 flex flex-col">
         <HeaderMenu />
-        {/* @ts-expect-error Server Component */}
+         {/* @ts-expect-error Server Component */}
         <Main />
         <Footer />
       </div>
