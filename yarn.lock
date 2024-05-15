@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@0no-co/graphql.web@^1.0.1":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@0no-co/graphql.web/-/graphql.web-1.0.4.tgz#9606eb651955499525d068ce0ad8bea596286ce2"
-  integrity sha512-W3ezhHGfO0MS1PtGloaTpg0PbaT8aZSmmaerL7idtU5F7oCI+uu25k+MsMS31BVFlp4aMkHSrNRxiD72IlK8TA==
+"@0no-co/graphql.web@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@0no-co/graphql.web/-/graphql.web-1.0.5.tgz#0e7dcce156eb1464731249e67c459e85b7019976"
+  integrity sha512-/ODdeNNFksS9hUvpjWFldMEpq0OqCFEIV3NVM0eU8HLUYU0Szf+2iKvr63kkbGchQwk2/1IxPF1PfoCabVkgLw==
 
 "@aashutoshrathi/word-wrap@^1.2.3":
   version "1.2.6"
@@ -689,12 +689,12 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@urql/core@^4.0.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@urql/core/-/core-4.3.0.tgz#5e150412ed08d167861b05ceed417abbd048553f"
-  integrity sha512-wT+FeL8DG4x5o6RfHEnONNFVDM3616ouzATMYUClB6CB+iIu2mwfBKd7xSUxYOZmwtxna5/hDRQdMl3nbQZlnw==
+"@urql/core@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@urql/core/-/core-5.0.0.tgz#690e664cf66f733077c558bf685adbdac2b25823"
+  integrity sha512-kFkZxusq/VBQKEUcQFtf7AilMotLO+oGpE4WFhCiminZm8ZU2aulXSDWla50TaD0pj704FnWlXts6lRm0uHdDg==
   dependencies:
-    "@0no-co/graphql.web" "^1.0.1"
+    "@0no-co/graphql.web" "^1.0.5"
     wonka "^6.3.2"
 
 "@zeit/schemas@2.36.0":
