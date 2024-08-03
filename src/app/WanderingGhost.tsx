@@ -71,9 +71,9 @@ function createGhost({ width, height }: CreateGhostParams): Ghost {
     x: direction === "left" ? width : 0,
     y: random(0, height),
     direction,
-    size: randomInt(24, 48),
-    speed: random(1.2, 3.5),
-    alpha: random(0.1, 0.5),
+    size: randomInt(24, 64),
+    speed: random(1.0, 2.5),
+    alpha: random(0.05, 0.6),
     updatedAt: Date.now(),
   };
 }
