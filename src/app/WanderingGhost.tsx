@@ -99,6 +99,9 @@ export const WanderingGhost: React.FC = () => {
       return;
     }
 
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
+
     const ghostNum = Math.floor(width / 64);
     const ghosts = Array.from(range(0, ghostNum)).map(() =>
       createGhost({ width, height }),

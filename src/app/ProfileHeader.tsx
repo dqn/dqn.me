@@ -9,7 +9,7 @@ export const ProfileHeader: React.FC = () => {
         height={avatar.height}
         alt="avatar"
         decoding="async"
-        className="mx-auto w-36 rounded-full xs:mx-0"
+        className="mx-auto w-36 rounded-full border-8 border-white/50 xs:mx-0"
       />
       <div className="mt-4 xs:mt-0 xs:flex xs:flex-col xs:justify-center">
         <h1 className="w-full text-2xl font-bold xs:text-left">dqn</h1>
