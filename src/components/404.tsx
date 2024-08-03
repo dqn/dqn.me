@@ -11,12 +11,12 @@ const NotFound: React.FC = () => {
           src={i404.src}
           width={i404.width}
           height={i404.height}
-          alt="Illustration of my avatar being cry"
+          alt="avatar being cry"
           decoding="async"
           className="mx-auto"
         />
 
-        <h1 className="mt-8 text-3xl font-bold">404 Not Found…</h1>
+        <h1 className="mt-8 text-3xl font-bold">404 Not Found</h1>
 
         <div className="mt-2">
           <PrettyLink href="/">Go to top page</PrettyLink>

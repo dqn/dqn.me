@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
-import { withBaseUrl } from "../helpers/withBaseUrl";
-import "../styles/globals.css";
-import tailwindConfig from "../../tailwind.config";
+import tailwindConfig from "@/../tailwind.config"
+import "./globals.css";
+import { withBaseUrl } from "@/helpers/withBaseUrl";
 
 const title = "dqn.me";
 const description = "👻 A Software Engineer";
 
 export const metadata: Metadata = {
-  title: {
-    default: title,
-    template: "%s | dqn.me",
-  },
+  title,
   description,
   themeColor: tailwindConfig.theme.colors.brand.DEFAULT,
   openGraph: {
@@ -39,12 +36,15 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html>
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
-};
-
-export default RootLayout;
+}

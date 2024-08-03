@@ -98,7 +98,7 @@ export const WanderingGhost: React.FC = () => {
     }
 
     const ghostNum = Math.floor(width / 64);
-    const ghosts = [...range(0, ghostNum)].map(() =>
+    const ghosts = Array.from(range(0, ghostNum)).map(() =>
       createGhost({ width, height }),
     );
 

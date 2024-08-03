@@ -1,43 +1,28 @@
 {
   "name": "dqn.me",
-  "version": "1.0.0",
-  "repository": "git@github.com:dqn/dqn.me.git",
-  "author": "dqn <dqn270@gmail.com>",
-  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "serve out",
-    "lint": "next lint",
-    "download-schema": "ts-node scripts/download-schema.ts",
-    "codegen": "nitrogql generate"
+    "start": "next start",
+    "lint": "tsc && next lint"
   },
   "dependencies": {
-    "@urql/core": "^4.0.0",
-    "eslint-config-next": "13.5.6",
-    "graphql": "^16.6.0",
-    "next": "^13.4.2",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "sharp": "^0.33.0"
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.5"
   },
   "devDependencies": {
-    "@graphql-typed-document-node/core": "^3.2.0",
-    "@nitrogql/cli": "^1.0.0-beta.0",
-    "@nitrogql/graphql-loader": "^1.0.0-beta.0",
-    "@types/dedent": "^0.7.0",
-    "@types/node": "18.19.33",
-    "@types/react": "18.3.1",
-    "@types/tailwindcss": "3.1.0",
-    "autoprefixer": "10.4.19",
-    "dedent": "^0.7.0",
-    "eslint": "8.57.0",
-    "postcss": "8.4.38",
-    "prettier": "2.8.8",
-    "prettier-plugin-tailwindcss": "0.5.14",
-    "serve": "^14.2.0",
-    "tailwindcss": "3.4.3",
-    "tsx": "^3.12.7",
-    "typescript": "5.0.4"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
