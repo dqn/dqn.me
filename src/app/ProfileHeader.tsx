@@ -1,4 +1,4 @@
-import avatar from "../../public/avatar.jpg";
+import avatar from "./avatar.jpg";
 
 export const ProfileHeader: React.FC = () => {
   return (
@@ -9,11 +9,11 @@ export const ProfileHeader: React.FC = () => {
         height={avatar.height}
         alt="avatar"
         decoding="async"
-        className="mx-auto w-48 rounded-full hover:animate-shake xs:mx-0"
+        className="mx-auto w-36 rounded-full xs:mx-0"
       />
-      <div className="mt-4 xs:mt-0 xs:flex xs:flex-col xs:items-center xs:justify-center">
+      <div className="mt-4 xs:mt-0 xs:flex xs:flex-col xs:justify-center">
         <h1 className="w-full text-2xl font-bold xs:text-left">dqn</h1>
-        <div className="mx-auto mt-2 w-[17ch] font-semibold">
+        <div className="mx-auto mt-2 text-xl font-semibold">
           Software Engineer
         </div>
       </div>
