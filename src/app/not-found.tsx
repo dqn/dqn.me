@@ -1,4 +1,3 @@
-import i404 from "../../public/404.png";
 import { Footer } from "../components/Footer";
 import { PrettyLink } from "../components/PrettyLink";
 
