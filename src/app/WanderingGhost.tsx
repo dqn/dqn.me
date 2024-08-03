@@ -16,12 +16,12 @@ function* range(start: number, end: number) {
   }
 }
 
-function sample<T>(arr: readonly T[]): T {
+function choice<const T>(arr: readonly T[]): T {
   const index = Math.floor(Math.random() * arr.length);
   const item = arr[index];
 
   if (item === undefined) {
-    throw new Error("unexpected undefined");
+    throw new Error("item must not be undefined");
   }
 
   return item;
@@ -55,7 +55,8 @@ type Ghost = {
   direction: "left" | "right";
   size: number;
   speed: number;
-  transparency: number;
+  alpha: number;
+  updatedAt: number;
 };
 
 type CreateGhostParams = {
@@ -64,15 +65,16 @@ type CreateGhostParams = {
 };
 
 function createGhost({ width, height }: CreateGhostParams): Ghost {
-  const direction = sample(["left", "right"] as const);
+  const direction = choice(["left", "right"]);
 
   return {
     x: direction === "left" ? width : 0,
     y: random(0, height),
-    direction: direction,
+    direction,
     size: randomInt(24, 48),
     speed: random(1.2, 3.5),
-    transparency: randomInt(0x10, 0x80),
+    alpha: random(0.1, 0.5),
+    updatedAt: Date.now(),
   };
 }
 
@@ -102,39 +104,40 @@ export const WanderingGhost: React.FC = () => {
       createGhost({ width, height }),
     );
 
+    const img = new Image();
+    img.src = "/ghost.png";
+
     const updateGhosts = () => {
       ghosts.forEach((ghost) => {
-        ghost.x += ghost.direction === "left" ? -ghost.speed : ghost.speed;
+        const elapsed = Date.now() - ghost.updatedAt;
+        const signedSpeed = (ghost.direction === "left" ? -1 : 1) * ghost.speed;
+        ghost.x += signedSpeed * elapsed * 0.08;
         ghost.y += Math.sin(ghost.x * 0.03) * 3;
+        ghost.updatedAt = Date.now();
       });
     };
 
     const drawGhosts = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       ghosts.forEach((ghost) => {
         if (ghost.x < 0 - ghost.size || ghost.x > width + ghost.size) {
           Object.assign(ghost, createGhost({ width, height }));
           return;
         }
 
-        ctx.fillStyle = `#000000${ghost.transparency.toString(16)}`;
-        ctx.font = `${ghost.size}px serif`;
-        ctx.textAlign = "left";
-        if (ghost.direction === "right") {
-          ctx.save();
-          ctx.scale(-1, 1);
-          ctx.fillText("👻", -ghost.x, ghost.y);
-          ctx.restore();
-        } else {
-          ctx.fillText("👻", ghost.x, ghost.y);
-        }
+        ctx.globalAlpha = ghost.alpha;
+        const { size } = ghost;
+
+        ctx.save();
+        ctx.translate(ghost.x, ghost.y);
+        ctx.drawImage(img, -size / 2, -size / 2, size, size);
+        ctx.restore();
       });
     };
 
     let handle = 0;
     const frame = () => {
       updateGhosts();
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       drawGhosts();
       handle = requestAnimationFrame(frame);
     };
